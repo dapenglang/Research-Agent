@@ -1,0 +1,49 @@
+module_id: "02"
+module_name: "Source Acquisition & Parsing"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Downloads papers from the queue, parses PDFs into normalized Markdown, and extracts equations, figures, tables, and citations with full provenance tracking."
+dependencies:
+  upstream:
+      - "01"
+  downstream:
+      - "03"
+inputs:
+  required:
+      - "download_queue.json"
+  optional:
+      []
+outputs:
+      - "papers/<paper_id>/metadata.json"
+      - "papers/<paper_id>/original.pdf"
+      - "papers/<paper_id>/source/"
+      - "papers/<paper_id>/normalized/paper.md"
+      - "papers/<paper_id>/equations.json"
+      - "papers/<paper_id>/figures.json"
+      - "papers/<paper_id>/tables.json"
+      - "papers/<paper_id>/citations.json"
+      - "papers/<paper_id>/provenance.json"
+quality_metrics:
+  hard_requirements:
+      - "Every paper in download_queue must have a normalized/paper.md"
+      - "provenance.json must exist for every downloaded paper"
+      - "original.pdf must exist for every paper (unless open-access-only)"
+  soft_thresholds:
+      - "Prefer >= 80% of queue papers successfully downloaded"
+      - "Prefer equation/figure/table extraction success rate >= 70%"
+validation:
+  input_validation:
+      - "download_queue.json exists and is valid JSON"
+      - "Queue is non-empty"
+      - "Each queue entry has paper_id, url, source_db"
+  output_validation:
+      - "normalized/paper.md is non-empty for each paper"
+      - "provenance.json has download_timestamp and source_hash"
+      - "metadata.json matches paper_id from download queue"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+

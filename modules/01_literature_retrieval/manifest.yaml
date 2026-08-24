@@ -1,0 +1,46 @@
+module_id: "01"
+module_name: "Literature Retrieval"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Retrieves relevant literature from databases and APIs based on the research task, producing metadata, a download queue, and a literature manifest."
+dependencies:
+  upstream:
+      []
+  downstream:
+      - "02"
+      - "03"
+inputs:
+  required:
+      - "research_task.yaml"
+  optional:
+      []
+outputs:
+      - "literature_manifest.json"
+      - "paper_metadata.jsonl"
+      - "download_queue.json"
+      - "Module01_Validation_Report.md"
+      - "module_manifest.json"
+quality_metrics:
+  hard_requirements:
+      - "At least 1 paper metadata entry in paper_metadata.jsonl"
+      - "research_task.yaml must contain a non-empty research_question"
+      - "download_queue.json must have at least 1 entry"
+  soft_thresholds:
+      - "Prefer >= 20 papers retrieved for meaningful analysis"
+      - "Prefer papers from >= 2 databases"
+validation:
+  input_validation:
+      - "research_task.yaml exists and is valid YAML"
+      - "research_question is non-empty string"
+      - "keywords list is non-empty"
+  output_validation:
+      - "paper_metadata.jsonl is valid JSONL with required fields"
+      - "download_queue.json entries have paper_id, url, source_db"
+      - "literature_manifest.json has total_papers matching jsonl count"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
