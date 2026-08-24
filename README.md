@@ -1,69 +1,245 @@
-# Research Agent v8.3.1
+<p align="center">
+  <img src="assets/logo.jpg" width="200" alt="Research Agent Logo" />
+</p>
 
-> 自动化科研流水线系统 — 从文献检索到论文生成的全流程 AI Research Agent
+<h1 align="center">Research Agent v8.3.1</h1>
 
-## 项目概述
+<p align="center">
+  <strong>Automated Research Pipeline — From Literature to Paper Generation</strong>
+</p>
 
-Research Agent 是一个模块化的自动科研流水线系统，覆盖从文献检索、创新发现、实验设计、结果分析到论文撰写的完整科研生命周期。
+<p align="center">
+  <img src="https://img.shields.io/badge/version-8.3.1-blue" alt="Version" />
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/PyTorch-Latest-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" />
+  <img src="https://img.shields.io/badge/modules-15-orange" alt="Modules" />
+  <img src="https://img.shields.io/badge/LLM-OpenAI%20%7C%20DeepSeek%20%7C%20Ollama-purple" alt="LLM" />
+</p>
 
-## 架构
-
-- **15 个独立模块** — 每个模块可独立运行，有独立的配置、输入输出说明和环境检测
-- **Pipeline 闭环** — Module 01 → 14 → 15 (科研记忆) 完整链路
-- **LLM 统一管理** — 支持 OpenAI / DeepSeek / Ollama，含 UsageTracker 和 Fallback 链
-- **Memory 共享** — 跨模块共享记忆目录
-
-## 模块清单
-
-| Day | Module | 功能 |
-|-----|--------|------|
-| 1 | - | 项目骨架与基础设施 |
-| 2 | - | LLM 运行时与基础设施层 |
-| 3 | 01 + 02 | 文献检索 + 论文获取与解析 |
-| 4 | 02.5 + 03 | 论文资产智能 + 文献智能分析 |
-| 5 | 04 + 05 | 研究领域全景 + 创新发现 |
-| 6 | 06 | 理论方法设计 |
-| 7 | 07 + 08 | 实验规划 + 合成实验引擎 |
-| 8 | 09 + 10 | 真实实验引擎 + 结果分析 |
-| 9 | 11 + 12 | 图表生成 + 论文撰写 |
-| 10 | 13 + 14 | 引用与补充 + 审稿循环 |
-| 11 | 15 | 科研记忆 + Orchestrator |
-| 12 | - | 数据模型与状态管理 |
-| 13 | - | 测试、模板与工具 |
-| 14 | - | 记忆目录与数据元信息 |
-| 15 | - | 最终整理与版本标签 |
-
-## 快速开始
-
-```bash
-# 安装依赖
-pip install -r requirements.txt
-
-# 配置 LLM
-cp configs/llm.yaml.example configs/llm.yaml
-# 编辑 llm.yaml 填入 API Key
-
-# 运行 Pipeline
-python -m orchestrator.pipeline --task configs/research_task.yaml
-```
-
-## 技术栈
-
-- Python 3.12
-- PyTorch
-- OpenAI / DeepSeek / Ollama LLM
-- arXiv MCP Server
-
-## 文档
-
-- [用户手册](Research_Agent_v8.3.1_User_Manual_CN.md)
-- [模块发布报告](Research_Agent_v8.3.1_Module_Release_Report.md)
-- [最终报告](Research_Agent_v8.3.1_Final_Report.md)
-
-## License
-
-MIT
+<p align="center">
+  <a href="#features">Features</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#modules">Modules</a> ·
+  <a href="#configuration">Configuration</a> ·
+  <a href="#documentation">Docs</a>
+</p>
 
 ---
 
-*Research Agent v8.3.1 Final Patch — 2026-08-18*
+## Overview
+
+Research Agent is a **modular, end-to-end automated research pipeline** that covers the full scientific research lifecycle — from literature retrieval and innovation discovery, through experiment design and result analysis, to paper writing and peer-review simulation.
+
+Each of the 15 modules operates **independently** with its own configuration, I/O specifications, and environment checker, while seamlessly forming a closed-loop pipeline when orchestrated together.
+
+## Features
+
+- **15 Independent Modules** — Each module can run standalone with its own config, START_HERE.md, and environment_check.py
+- **Pipeline Closed Loop** — Module 01 → ... → Module 14 → Module 15 (Research Memory) complete chain
+- **Unified LLM Management** — Supports OpenAI / DeepSeek / Ollama with UsageTracker and automatic Fallback chain
+- **Shared Memory** — Cross-module memory directory for datasets, experiments, methods, papers, and failed attempts
+- **Stage Reports** — 100% coverage (16/16 modules) — every module generates a Stage_Report.md
+- **Monte Carlo Simulation** — Synthetic experiment engine based on real paper statistics, not random generation
+- **4-Layer Data Persistence** — Raw / Processed / Comparison / Statistics data layers
+- **Multi-format Paper Output** — DOCX + Markdown + LaTeX simultaneously
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Research Agent v8.3.1                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Module 01 ──► Module 02 ──► Module 02.5 ──► Module 03         │
+│  Literature    Paper          Paper Asset      Literature       │
+│  Retrieval      Acquisition    Intelligence     Intelligence     │
+│                                                                 │
+│  Module 04 ──► Module 05 ──► Module 06 ──► Module 07           │
+│  Research      Innovation    Theory &       Experiment         │
+│  Landscape     Discovery      Method         Planning           │
+│                                                                 │
+│  Module 08 ──► Module 09 ──► Module 10 ──► Module 11           │
+│  Synthetic     Real           Result         Figure &           │
+│  Experiment    Experiment     Analysis       Table              │
+│                                                                 │
+│  Module 12 ──► Module 13 ──► Module 14 ──► Module 15           │
+│  Paper         Reference      Reviewer       Research           │
+│  Writing       & Suppl.       Loop           Memory             │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  Infrastructure: LLM Runtime │ State │ Memory │ MCP │ Skills    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.12+
+- Git
+- At least one LLM provider (OpenAI API key, DeepSeek API key, or local Ollama)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/dapenglang/Research-Agent.git
+cd Research-Agent
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure LLM
+cp configs/llm.yaml.example configs/llm.yaml
+# Edit llm.yaml with your API keys
+
+# Verify environment
+python scripts/check_research_ready.py
+```
+
+### Run the Pipeline
+
+```bash
+# Full pipeline
+python -m orchestrator.pipeline --task configs/research_task.yaml
+
+# Or run individual modules
+cd modules/01_literature_retrieval
+python -m src --task ../../configs/research_task.yaml
+```
+
+## Modules
+
+| Module | Name | Input | Output |
+|--------|------|-------|--------|
+| 01 | Literature Retrieval | research_task.yaml | literature_database.json |
+| 02 | Paper Acquisition | literature_database.json | pdf/, latex/, markdown/, figure_analysis.json |
+| 02.5 | Paper Asset Intelligence | paper assets | paper_asset_report.json |
+| 03 | Literature Intelligence | paper_database | paper_analysis.json, paper_analysis_trace.json |
+| 04 | Research Landscape | paper_analysis | research_landscape.md |
+| 05 | Innovation Discovery | limitations + future_work | innovation_candidates.json |
+| 06 | Theory & Method | innovation + gap | theory_analysis.md, theory_confidence.json |
+| 07 | Experiment Planning | theory + method | experiment_plan.yaml |
+| 08 | Synthetic Experiment | experiment_plan | raw/, processed/, comparison.csv, statistics.json |
+| 09 | Real Experiment | experiment_plan | experiment_results/ |
+| 10 | Result Analysis | experiment_results | result_analysis.md |
+| 11 | Figure & Table | results + analysis | mermaid_src, latex_tables, figure_prompts.json |
+| 12 | Paper Writing | all upstream | paper.docx, paper.md, paper.tex |
+| 13 | Reference & Supplementary | paper | references.bib |
+| 14 | Reviewer Loop | paper | reviewer_report.md |
+| 15 | Research Memory | all stage_reports | research_memory.md, decision_log.md, lessons_learned.md |
+
+## Configuration
+
+### LLM Configuration (`configs/llm.yaml`)
+
+```yaml
+providers:
+  openai:
+    api_key: "sk-xxx"
+    model: "gpt-4"
+  
+  deepseek:
+    api_key: "sk-xxx"
+    model: "deepseek-chat"
+  
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "deepseek-r1:8b"
+
+fallback_order: ["ollama_r1", "ollama", "deepseek", "openai"]
+```
+
+### Research Task (`configs/research_task.yaml`)
+
+```yaml
+task_id: "VLM_Safety_001"
+research_topic: "Vision-Language Model Safety"
+arxiv_keywords: ["VLM", "adversarial", "safety"]
+paper_count: 50
+experiment_mode: "synthetic"  # or "real"
+```
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [User Manual (CN)](Research_Agent_v8.3.1_User_Manual_CN.md) | Complete Chinese user manual |
+| [Module Release Report](Research_Agent_v8.3.1_Module_Release_Report.md) | 15 module ZIP packages with SHA256 |
+| [Final Report](Research_Agent_v8.3.1_Final_Report.md) | Modifications, tests, known issues |
+| [Start Here (CN)](docs/START_HERE_CN.md) | Quick start guide in Chinese |
+| [LLM Config Guide (CN)](docs/LLM_Configuration_Guide_CN.md) | LLM provider setup |
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| Language | Python 3.12 |
+| ML Framework | PyTorch |
+| LLM Providers | OpenAI, DeepSeek, Ollama |
+| Paper Source | arXiv MCP Server |
+| Document Output | python-docx, LaTeX |
+| Data Format | JSON, YAML, CSV, XLSX |
+| Diagrams | Mermaid |
+| Version Control | Git |
+
+## Project Structure
+
+```
+Research-Agent/
+├── core/                    # Core framework (state, contracts, validation)
+├── infrastructure/          # LLM runtime, MCP, skills, storage
+├── modules/                 # 15 independent modules
+│   ├── 01_literature_retrieval/
+│   ├── 02_source_acquisition/
+│   ├── ...
+│   └── 15_research_memory/
+├── orchestrator/            # Pipeline orchestrator
+├── configs/                 # YAML configurations
+├── docs/                    # Documentation
+├── scripts/                 # Utility scripts
+├── tests/                   # Test suite
+├── memory/                  # Shared research memory
+└── README.md
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-module`)
+3. Commit changes following Conventional Commits
+4. Push to branch (`git push origin feature/new-module`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+If you use Research Agent in your research, please cite:
+
+```bibtex
+@misc{research_agent_v831,
+  title={Research Agent: Automated Research Pipeline from Literature to Paper},
+  author={Lang, Bruce},
+  year={2026},
+  version={8.3.1},
+  url={https://github.com/dapenglang/Research-Agent}
+}
+```
+
+## Acknowledgments
+
+- arXiv for open access to research papers
+- OpenAI, DeepSeek, and Ollama for LLM infrastructure
+- The open-source community for foundational tools
+
+---
+
+<p align="center">
+  <sub>Built with ❤ for automated scientific research</sub><br>
+  <sub>Research Agent v8.3.1 Final Patch — August 2026</sub>
+</p>
