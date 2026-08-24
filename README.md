@@ -239,6 +239,40 @@ If you use Research Agent in your research, please cite:
 
 ---
 
+## 💡 支持本项目
+
+> **Research Agent 不是一个玩具项目。**
+
+这是一个**工程标准极高、功能完整**的自动化科研系统，覆盖了从文献检索到论文撰写的完整科研生命周期：
+
+- **全流程覆盖** — 15 个独立模块，从文献检索 → 创新发现 → 理论方法设计 → 实验规划 → 合成/真实实验 → 结果分析 → 图表生成 → 论文撰写 → 引用管理 → 审稿模拟 → 科研记忆，端到端闭环
+- **实验设计能力** — 自动生成实验方案（`experiment_plan.yaml`），支持消融实验、对比实验、敏感性分析
+- **数据仿真引擎** — 基于真实论文统计建模的 Monte Carlo 仿真，四层数据保存（原始 → 中间 → 对比 → 统计），无需 GPU 即可验证研究假设
+- **LLM 统一管理** — 支持 OpenAI / DeepSeek / Ollama，自动 Fallback 降级，全链路 Usage 追踪
+- **多格式论文输出** — 同时生成 DOCX / Markdown / LaTeX，含理论章节、引用、图表
+- **科研记忆系统** — 跨模块共享决策日志、经验教训，支持增量迭代
+
+**特别适合以下人群：**
+
+- 刚开始学术研究的硕博新生 — 不用从零搭建科研工具链
+- 需要快速验证研究想法可行性的研究者 — 仿真实验无需 GPU
+- 想要系统化管理文献和创新思路的团队 — 15 模块闭环覆盖
+- 投稿顶会/顶刊需要完整实验+论文流水线的研究者 — 从 idea 到 paper 一站完成
+
+如果你觉得这个项目对你的科研有帮助，运行过程中遇到问题需要技术支持，**请给作者支持 5 毛钱** ☕
+
+你的支持是我持续维护和优化这个项目的动力。
+
+<p align="center">
+  <img src="assets/wechat_support.jpg" width="300" alt="微信支持" />
+</p>
+
+<p align="center">
+  <sub>微信扫码 · ¥0.50 · 感谢支持</sub>
+</p>
+
+---
+
 <p align="center">
   <sub>Built with ❤ for automated scientific research</sub><br>
   <sub>Research Agent v8.3.1 Final Patch — August 2026</sub>
