@@ -1,0 +1,113 @@
+mcp_servers:
+  arxiv:
+    type: stdio
+    command: uvx
+    args:
+    - arxiv-mcp-server
+    description: arXiv 论文搜索、下载、LaTeX源码读取、引用图谱
+    category: literature
+    enabled: true
+    installed: true
+    configured: true
+    tested: true
+    config_path: ''
+    install_method: uvx
+    fallback: mcp:arxiv
+  paper-search:
+    type: stdio
+    command: uvx
+    args:
+    - paper-search-mcp
+    description: 20+平台多源学术论文搜索与下载
+    category: literature
+    enabled: true
+    installed: true
+    configured: true
+    tested: true
+    config_path: ''
+    install_method: uvx
+    fallback: mcp:paper-search
+  zotero:
+    type: stdio
+    command: uvx
+    args:
+    - zotero-mcp-server
+    description: Zotero文献管理集成，语义搜索、PDF标注提取、BibTeX导出
+    category: reference
+    env:
+      ZOTERO_API_KEY: ''
+      ZOTERO_LIBRARY_ID: ''
+    enabled: false
+    installed: false
+    configured: false
+    tested: false
+    config_path: configs/zotero.yaml
+    install_method: uvx
+    fallback: mcp:zotero
+  obsidian:
+    type: stdio
+    command: npx
+    args:
+    - -y
+    - obsidian-mcp
+    description: Obsidian知识库笔记读写
+    category: knowledge_base
+    env:
+      OBSIDIAN_VAULT_PATH: ''
+    enabled: false
+    installed: false
+    configured: false
+    tested: false
+    config_path: ''
+    install_method: npx
+    fallback: mcp:default
+  drawio:
+    type: stdio
+    command: npx
+    args:
+    - -y
+    - '@drawio/mcp'
+    description: draw.io 图表生成 (Phase 4 DISABLED, using Mermaid instead)
+    category: figure
+    enabled: false
+    installed: true
+    configured: true
+    tested: false
+    config_path: ''
+    install_method: npx
+    fallback: mcp:drawio
+  chart:
+    type: stdio
+    command: npx
+    args:
+    - -y
+    - '@antv/mcp-server-chart'
+    description: 26+种统计图表生成 (Phase 4 DISABLED, using Mermaid/matplotlib instead)
+    category: figure
+    enabled: false
+    installed: true
+    configured: true
+    tested: false
+    config_path: ''
+    install_method: npx
+    fallback: mcp:chart
+  fetch:
+    type: stdio
+    command: uvx
+    args:
+    - mcp-server-fetch
+    description: 网页内容提取
+    category: web
+    enabled: true
+    installed: true
+    configured: true
+    tested: true
+    config_path: ''
+    install_method: uvx
+    fallback: mcp:fetch
+categories:
+  literature: 文献检索与下载
+  reference: 引用与文献管理
+  knowledge_base: 知识库集成
+  figure: 科研绘图与可视化
+  web: 网络搜索与内容提取

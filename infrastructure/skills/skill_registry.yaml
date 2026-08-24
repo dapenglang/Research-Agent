@@ -1,0 +1,496 @@
+# Skill Registry - Maps research pipeline modules to TRAE skills
+# v8.2.2: Added version, source, install_path, required, capability, fallback fields
+# Fallback values reference policy names in configs/dependency_policy.yaml
+
+module_skill_mapping:
+  "01":
+    - skill_name: light-literature-search
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: "c:/Users/<user>/.trae-cn/skills/light-literature-search"
+      required: true
+      capability: "literature_search"
+      fallback: "skill:light-literature-search"
+    - skill_name: nature-academic-search
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+    - skill_name: qinyan-paper-search
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+    - skill_name: literature-search
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+    - skill_name: paper-lookup
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+    - skill_name: openalex
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+
+  "02":
+    - skill_name: nature-downloader
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_download"
+      fallback: "skill:default"
+    - skill_name: pdf-converter-mineru
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "pdf_parsing"
+      fallback: "skill:default"
+    - skill_name: arxiv
+      version: "1.0"
+      source: "mcp"
+      install_path: ""
+      required: true
+      capability: "paper_download"
+      fallback: "skill:arxiv"
+
+  "02_5":
+    - skill_name: academic-figure-workflow-orchestrator
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_extraction"
+      fallback: "skill:default"
+
+  "03":
+    - skill_name: nature-reader
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_analysis"
+      fallback: "skill:default"
+    - skill_name: nature-paper-card
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_analysis"
+      fallback: "skill:default"
+    - skill_name: light-file-reading
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "file_reading"
+      fallback: "skill:default"
+    - skill_name: qinyan-paper-analysis
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_analysis"
+      fallback: "skill:default"
+
+  "04":
+    - skill_name: light-idea-generation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "idea_generation"
+      fallback: "skill:default"
+    - skill_name: light-idea-critique
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "idea_critique"
+      fallback: "skill:default"
+    - skill_name: research-ideation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "idea_generation"
+      fallback: "skill:default"
+    - skill_name: literature-review
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_review"
+      fallback: "skill:default"
+    - skill_name: light-literature-search
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "literature_search"
+      fallback: "skill:default"
+
+  "05":
+    - skill_name: light-idea-generation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: true
+      capability: "idea_generation"
+      fallback: "skill:default"
+    - skill_name: research-ideation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "idea_generation"
+      fallback: "skill:default"
+    - skill_name: scientific-brainstorming
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "brainstorming"
+      fallback: "skill:default"
+    - skill_name: hypothesis-formulation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "hypothesis"
+      fallback: "skill:default"
+    - skill_name: novelty-check
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "novelty_check"
+      fallback: "skill:default"
+    - skill_name: light-idea-critique
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "idea_critique"
+      fallback: "skill:default"
+
+  "06":
+    - skill_name: light-research-plan
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "research_planning"
+      fallback: "skill:default"
+    - skill_name: experiment-design
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_design"
+      fallback: "skill:default"
+    - skill_name: light-system-design
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "system_design"
+      fallback: "skill:default"
+    - skill_name: formula-derivation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "formula_derivation"
+      fallback: "skill:default"
+
+  "07":
+    - skill_name: experiment-design
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_design"
+      fallback: "skill:default"
+    - skill_name: light-experiment-coding
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_coding"
+      fallback: "skill:default"
+    - skill_name: experimental-design
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_design"
+      fallback: "skill:default"
+
+  "08":
+    - skill_name: light-data-engineering
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "data_engineering"
+      fallback: "skill:default"
+    - skill_name: light-experiment-coding
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_coding"
+      fallback: "skill:default"
+
+  "09":
+    - skill_name: run-experiment
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_execution"
+      fallback: "skill:default"
+    - skill_name: monitor-experiment
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_monitoring"
+      fallback: "skill:default"
+    - skill_name: light-experiment-coding
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "experiment_coding"
+      fallback: "skill:default"
+
+  "10":
+    - skill_name: light-result-analysis
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "result_analysis"
+      fallback: "skill:default"
+    - skill_name: nature-statistics
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "statistical_analysis"
+      fallback: "skill:default"
+    - skill_name: results-analysis
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "result_analysis"
+      fallback: "skill:default"
+    - skill_name: statistical-analysis
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "statistical_analysis"
+      fallback: "skill:default"
+
+  "11":
+    - skill_name: academic-figure-workflow-orchestrator
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_generation"
+      fallback: "skill:default"
+    - skill_name: academic-figure-prompt
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_prompt"
+      fallback: "skill:default"
+    - skill_name: academic-figure-color-expert
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "color_expert"
+      fallback: "skill:default"
+    - skill_name: paper-framework-figure-studio-pro
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_generation"
+      fallback: "skill:default"
+    - skill_name: drawio
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "diagram_generation"
+      fallback: "skill:drawio"
+    - skill_name: light-figure
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_generation"
+      fallback: "skill:default"
+    - skill_name: nature-figure
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "figure_generation"
+      fallback: "skill:nature-figure"
+    - skill_name: scientific-visualization
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "visualization"
+      fallback: "skill:default"
+    - skill_name: matplotlib
+      version: "1.0"
+      source: "pip"
+      install_path: ""
+      required: true
+      capability: "plotting"
+      fallback: "skill:default"
+
+  "12":
+    - skill_name: ml-paper-writing
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_writing"
+      fallback: "skill:default"
+    - skill_name: nature-writing
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: true
+      capability: "paper_writing"
+      fallback: "skill:nature-writing"
+    - skill_name: light-paper-writing
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_writing"
+      fallback: "skill:default"
+    - skill_name: academic-paper
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_writing"
+      fallback: "skill:academic-paper"
+    - skill_name: research-writing-skill-main
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_writing"
+      fallback: "skill:default"
+    - skill_name: systems-paper-writing
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_writing"
+      fallback: "skill:default"
+
+  "13":
+    - skill_name: light-citation
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "citation_management"
+      fallback: "skill:default"
+    - skill_name: citation-audit
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "citation_audit"
+      fallback: "skill:default"
+    - skill_name: nature-ref-verifier
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "citation_verification"
+      fallback: "skill:default"
+    - skill_name: citation-verification
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "citation_verification"
+      fallback: "skill:default"
+    - skill_name: citation-management
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "citation_management"
+      fallback: "skill:default"
+
+  "14":
+    - skill_name: academic-paper-reviewer
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_review"
+      fallback: "skill:default"
+    - skill_name: paper-self-review
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_review"
+      fallback: "skill:default"
+    - skill_name: auto-review-loop-llm
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "review_loop"
+      fallback: "skill:default"
+    - skill_name: nature-reviewer
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "paper_review"
+      fallback: "skill:default"
+    - skill_name: kill-argument
+      version: "1.0"
+      source: "trae-skill-store"
+      install_path: ""
+      required: false
+      capability: "argument_analysis"
+      fallback: "skill:default"
