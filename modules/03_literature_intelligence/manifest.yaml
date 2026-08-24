@@ -1,0 +1,46 @@
+module_id: "03"
+module_name: "Literature Intelligence"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Performs deep analysis of normalized papers to extract contributions, methods, datasets, limitations, and relationships, producing structured per-paper analysis and a cross-paper index."
+dependencies:
+  upstream:
+      - "02"
+  downstream:
+      - "04"
+      - "05"
+inputs:
+  required:
+      - "papers/<paper_id>/normalized/paper.md"
+  optional:
+      - "papers/<paper_id>/equations.json"
+      - "papers/<paper_id>/figures.json"
+      - "papers/<paper_id>/tables.json"
+outputs:
+      - "paper_analysis.json"
+      - "paper_analysis.md"
+      - "literature_analysis_index.jsonl"
+      - "Module03_Validation_Report.md"
+quality_metrics:
+  hard_requirements:
+      - "paper_analysis.json exists for every normalized paper"
+      - "Each analysis has main_contribution and methodology"
+      - "literature_analysis_index.jsonl is valid JSONL"
+  soft_thresholds:
+      - "Prefer >= 90% of papers have limitations extracted"
+      - "Prefer cross-paper relationship coverage >= 70%"
+validation:
+  input_validation:
+      - "At least 1 normalized paper.md exists"
+      - "Each paper.md is non-empty"
+  output_validation:
+      - "paper_analysis.json has required fields (paper_id, main_contribution, methodology)"
+      - "literature_analysis_index.jsonl line count matches number of analyzed papers"
+      - "No duplicate paper_ids in index"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+

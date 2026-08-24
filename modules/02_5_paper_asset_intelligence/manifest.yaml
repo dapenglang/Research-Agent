@@ -1,0 +1,36 @@
+module_id: "02_5"
+module_name: "Paper Asset Intelligence"
+module_version: "1.0.0"
+schema_version: "1.0"
+description: "Extracts and saves first 3 figures from each paper. Prefers arXiv LaTeX source; falls back to PDF extraction."
+dependencies:
+  upstream:
+    - "02"
+  downstream:
+    - "03"
+    - "12"
+inputs:
+  required:
+    - "paper_metadata.jsonl"
+  optional: []
+outputs:
+  - "paper_assets.json"
+  - "assets/figure_1.png"
+  - "assets/figure_2.png"
+  - "assets/figure_3.png"
+quality_metrics:
+  hard_requirements:
+    - "paper_assets.json must be valid JSON"
+  soft_thresholds:
+    - "Prefer at least 1 figure extracted per paper"
+validation:
+  input_validation:
+    - "paper_metadata.jsonl exists"
+  output_validation:
+    - "paper_assets.json is valid JSON with path, filename, source fields"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
