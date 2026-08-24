@@ -1,0 +1,105 @@
+# Dependency Fallback Policy
+# v8.2.2 Centralized fallback management
+# Modules MUST NOT decide fallback on their own — they query pipeline.get_fallback()
+
+# Skill Fallback Policies
+skill_fallback:
+  "skill:light-literature-search":
+    action: "llm_prompt"
+    prompt_template: "literature_search_basic"
+    message: "light-literature-search Skill missing, using LLM basic search prompt"
+
+  "skill:arxiv":
+    action: "internal_implementation"
+    message: "arxiv MCP missing, using built-in PaperDownloader"
+
+  "skill:academic-paper":
+    action: "llm_prompt"
+    prompt_template: "paper_writing_basic"
+    message: "academic-paper Skill missing, using LLM basic paper writing prompt"
+
+  "skill:nature-writing":
+    action: "llm_prompt"
+    prompt_template: "paper_writing_basic"
+    message: "nature-writing Skill missing, degraded to generic writing prompt"
+
+  "skill:drawio":
+    action: "llm_prompt"
+    prompt_template: "figure_generation_prompt"
+    message: "drawio Skill missing, outputting drawing prompt for manual generation"
+
+  "skill:nature-figure":
+    action: "matplotlib"
+    message: "nature-figure Skill missing, using matplotlib built-in plotting"
+
+  "skill:default":
+    action: "skip"
+    message: "Skill missing, skipping enhancement"
+
+# MCP Fallback Policies
+mcp_fallback:
+  "mcp:arxiv":
+    action: "internal_implementation"
+    message: "arxiv MCP unavailable, using built-in PaperDownloader"
+
+  "mcp:paper-search":
+    action: "internal_implementation"
+    message: "paper-search MCP unavailable, using built-in multi-source search"
+
+  "mcp:zotero":
+    action: "local_file"
+    message: "Zotero MCP unavailable, using local .bib file management"
+
+  "mcp:drawio":
+    action: "llm_prompt"
+    prompt_template: "figure_generation_prompt"
+    message: "Draw.io MCP unavailable, outputting ChatGPT/Gemini drawing prompt"
+
+  "mcp:chart":
+    action: "matplotlib"
+    message: "Chart MCP unavailable, using matplotlib built-in plotting"
+
+  "mcp:fetch":
+    action: "skip"
+    message: "Fetch MCP unavailable, skipping web content extraction"
+
+  "mcp:default":
+    action: "skip"
+    message: "MCP unavailable, skipping"
+
+# LLM Fallback Policy
+# Phase 4: LLM failure must trigger human intervention, NOT template generation
+llm_fallback:
+  action: "human_intervention"
+  message: "LLM unavailable, pipeline paused for human intervention. Set DEEPSEEK_API_KEY or OPENAI_API_KEY environment variable."
+  prohibited_actions:
+    - "template"  # Template generation for paper writing is PROHIBITED
+    - "mock"      # Mock LLM for research reasoning is PROHIBITED
+
+# Model Fallback Policy
+# Phase 4: Experiment failure allows synthetic data generation
+model_fallback:
+  action: "synthetic_experiment"
+  message: "Model/GPU not available, using synthetic experiment data (allowed in limited mode)"
+
+# Run Mode Constraints
+# Phase 4: Limited mode requires real LLM for research reasoning, allows synthetic experiments
+mode_constraints:
+  production:
+    allow_fallback: false
+    require_real_llm: true
+    allow_mock: false
+    allow_synthetic_experiment: false
+  limited:
+    allow_fallback: true
+    require_real_llm: true  # Phase 4: limited mode requires real LLM for innovation/method/paper
+    allow_mock: false
+    allow_synthetic_experiment: true  # Phase 4: synthetic experiments allowed
+    llm_failure_action: "human_intervention"  # Phase 4: LLM failure → stop, not template
+    skill_required_missing: "pause_install"  # Phase 4: required skill missing → pause for install
+    skill_optional_missing: "fallback"  # Phase 4: optional skill missing → use fallback
+  development:
+    allow_fallback: true
+    require_real_llm: false
+    allow_mock: true
+    allow_synthetic_experiment: true

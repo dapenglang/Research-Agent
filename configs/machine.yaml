@@ -1,0 +1,16 @@
+machine:
+  os: "Windows 11"              # Operating system
+  python_version: "3.12"        # Python version (standard: 3.12)
+  conda_env: "research_agent_v3" # Conda environment name
+  cpu:
+    cores: 8                    # Number of CPU cores
+    architecture: "x86_64"       # CPU architecture
+  ram_gb: 16                     # Total RAM in GB
+  gpu:
+    available: true              # Whether a GPU is available
+    device: "NVIDIA RTX A500 Laptop GPU"  # GPU name
+    vram_gb: 4                   # GPU VRAM in GB
+    cuda_version: "12.1"         # CUDA version
+  network:
+    internet: true               # Internet connectivity
+    proxy: ""                    # Proxy URL (empty if none)

@@ -1,0 +1,34 @@
+# Experiment Mode Configuration
+# Controls which modules execute based on available hardware
+
+modes:
+  synthetic_research:
+    description: "CPU-only synthetic research mode (no GPU required)"
+    skip_modules:
+      - "09"
+    module_08:
+      data_origin: "synthetic_research_simulation"
+      enabled: true
+    module_09:
+      enabled: false
+
+  real_gpu:
+    description: "Full GPU mode with real experiments"
+    skip_modules: []
+    module_08:
+      data_origin: "synthetic_research_simulation"
+      enabled: true
+    module_09:
+      enabled: true
+
+  real_gpu_only:
+    description: "GPU-only mode, skip synthetic experiments"
+    skip_modules:
+      - "08"
+    module_08:
+      enabled: false
+    module_09:
+      enabled: true
+
+# Default mode (auto-selected based on GPU availability)
+default: "synthetic_research"

@@ -1,0 +1,52 @@
+# Research Task Configuration
+# Modify this file to start a new research project
+
+# Research topic
+topic: "Visual Large Model Safety"
+
+# Keywords for literature search
+keywords:
+  - "VLM safety"
+  - "adversarial attack"
+  - "jailbreak defense"
+  - "multimodal alignment"
+
+# Target conference (CVPR | ICCV | NeurIPS | ICLR | AAAI | ACL)
+target_venue: CVPR
+
+# Experiment mode (A | C)
+# A = synthetic/simulation experiment (CPU, no GPU needed)
+# C = GPU real experiment
+experiment_mode: A
+
+# Literature search settings
+literature:
+  databases:
+    - arxiv
+    - semantic_scholar
+  max_papers: 50
+  min_papers: 50
+  year_range:
+    start: 2020
+    end: 2026
+
+# LLM settings (overrides configs/llm.yaml if specified)
+llm:
+  # provider: deepseek
+  # model: deepseek-chat
+  # temperature: 0.3
+
+# Human-in-the-loop settings
+human_in_loop:
+  enabled: true
+  pause_at:
+    - "05"  # Innovation reasoning
+    - "06"  # Method design
+    - "14"  # Reviewer
+  feedback_dir: human_feedback
+
+# Output settings
+output:
+  paper_format: ["md", "tex", "docx"]
+  figure_format: ["svg", "pdf"]
+  supplementary: true

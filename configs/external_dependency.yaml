@@ -1,0 +1,38 @@
+# External Dependency Management
+# v8.2.2 Unified entry point for all external dependencies
+# This file is the single source of truth for dependency configuration locations
+
+run_mode: limited  # production | limited | development
+
+# External dependency configuration file locations (kept at original paths)
+dependency_configs:
+  skill_registry:
+    path: "infrastructure/skills/skill_registry.yaml"
+    type: yaml
+  mcp_registry:
+    path: "infrastructure/mcp/mcp_registry.yaml"
+    type: yaml
+  llm_config:
+    path: "configs/llm.yaml"
+    type: yaml
+  model_registry:
+    path: "configs/model_registry.yaml"
+    type: yaml
+  fallback_policy:
+    path: "configs/dependency_policy.yaml"
+    type: yaml
+
+# Install roots (Phase 4: real paths for current machine)
+install_roots:
+  skills: "C:/Users/langd/.trae-cn/skills"
+  mcp: "uvx"
+  models: "D:/Models"
+  ollama: "E:/ollama/models"
+
+# Check scripts
+check_scripts:
+  portability: "scripts/check_portability.py"
+  skills: "scripts/check_skills.py"
+  mcp: "scripts/check_mcp.py"
+  llm: "scripts/check_llm.py"
+  literature: "scripts/check_literature.py"

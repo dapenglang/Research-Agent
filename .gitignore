@@ -1,0 +1,89 @@
+# ============================================
+# Research Agent v8.3.1 .gitignore
+# 排除：PDF、模型权重、缓存、大文件、临时文件
+# ============================================
+
+# --- PDF 文件（已下载的论文）---
+*.pdf
+*.PDF
+
+# --- 模型权重 ---
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.weights
+
+# --- 大数据文件 ---
+*.pkl
+*.npy
+*.npz
+*.parquet
+*.arrow
+*.feather
+
+# --- Python 缓存 ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- 虚拟环境 ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- 系统文件 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- 日志 ---
+*.log
+logs/
+
+# --- 临时文件 ---
+*.tmp
+*.bak
+*.orig
+
+# --- 压缩包（Release ZIP 在 releases 目录单独管理）---
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# --- 输出目录中的大文件（保留目录结构和小文件）---
+output/**/*.png
+output/**/*.jpg
+output/**/*.jpeg
+output/**/*.tiff
+output/**/*.bmp
+
+# --- 数据目录中的大文件（保留 JSON/CSV 等元数据）---
+data/literature/pdf/*
+!data/literature/pdf/.gitkeep
+data/literature/latex/*.zip
+
+# --- Infrastructure 模型目录 ---
+infrastructure/models/*
+
+# --- 临时下载 ---
+*.download
+*.partial
+
+# --- .TRAE 配置 ---
+.trae-cn/

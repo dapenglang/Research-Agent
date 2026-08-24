@@ -1,0 +1,11 @@
+storage:
+  root: ""                      # ROOT DATA DIRECTORY — MUST SET
+  subdirs:
+    models: "models"             # Model weights
+    datasets: "datasets"         # Datasets
+    papers: "papers"             # Downloaded papers
+    experiments: "experiments"  # Experiment outputs
+    external_data: "external_data"  # External data
+    cache: "cache"               # Cache directory
+    memory: "memory"            # Memory store
+    outputs: "outputs"           # Pipeline outputs

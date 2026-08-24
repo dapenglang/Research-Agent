@@ -1,0 +1,50 @@
+# Provider Configurations
+# Phase 4: Dual-model strategy — deepseek-r1:8b (reasoning) + gemma4:26b (auxiliary)
+# Both served locally via Ollama, no API key needed
+
+providers:
+  llm:
+    default: "ollama_r1"
+    mock:
+      only_for:
+        - unit_test
+        - integration_test
+        - development
+      prohibited_for:
+        - literature_analysis
+        - innovation_generation
+        - paper_generation
+        - experiment_analysis
+    openai:
+      type: "openai"
+      model: "gpt-4o"
+      api_key_env: "OPENAI_API_KEY"
+      endpoint: "https://api.openai.com/v1"
+      temperature: 0.3
+      max_tokens: 4096
+    deepseek:
+      type: "deepseek"
+      model: "deepseek-reasoner"
+      api_key_env: "DEEPSEEK_API_KEY"
+      endpoint: "https://api.deepseek.com/v1"
+      temperature: 0.3
+      max_tokens: 8192
+    ollama_r1:
+      type: "ollama"
+      model: "deepseek-r1:8b"
+      endpoint: "http://localhost:11434/v1"
+      temperature: 0.3
+      max_tokens: 8192
+      timeout: 300
+    ollama:
+      type: "ollama"
+      model: "gemma4:26b"
+      endpoint: "http://localhost:11434/v1"
+      temperature: 0.3
+      max_tokens: 8192
+      timeout: 300
+  mcp:
+    enabled: false
+    servers: []
+  api: {}
+  skills: {}

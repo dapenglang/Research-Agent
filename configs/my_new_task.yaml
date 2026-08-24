@@ -1,0 +1,81 @@
+# ============================================================
+# Research Agent v3 — Formal Research Task Template
+# ============================================================
+# This is the OFFICIAL template for a new research task.
+# Copy this file, rename it, and fill in your research content.
+#
+# Usage:
+#   cp configs/research_task_template.yaml my_research_task.yaml
+#   # Edit my_research_task.yaml
+#   python -m Research_Agent_v3.cli.cli start --task my_research_task.yaml
+#
+# NOTE: tests/e2e_test_data/research_task.yaml is for E2E tests ONLY.
+#       Do NOT use it as a template for real research.
+# ============================================================
+
+# ---- Task Identity (REQUIRED) ----
+task_id: "my_research_001"
+title: "Your Research Title"
+
+# ---- Research Content (REQUIRED — drives Modules 01-07) ----
+research:
+  domain: "computer_vision"          # Research domain (e.g. computer_vision, nlp, rl)
+  topic: "Adversarial Robustness of Vision-Language Models"  # Specific topic
+  keywords:                           # Search keywords for literature retrieval
+    - "adversarial attack"
+    - "vision-language model"
+    - "robustness"
+  research_question: "How do adversarial patches affect VLM reasoning capabilities?"
+  target: "LLaVA-1.5-7B"             # Target model/method/system to study
+
+# ---- Literature Acquisition Settings (OPTIONAL — drives Modules 01-02) ----
+literature:
+  candidate_target: []               # Paper IDs to consider as candidates (empty = auto-search)
+  core_target: []                    # Paper IDs that must be deep-analyzed (empty = auto-select)
+  deep_analysis_target: []           # Paper IDs for deep analysis (empty = auto-select)
+  arxiv:
+    download_pdf: true               # Download PDF files from arXiv
+    download_source: false           # Download LaTeX source from arXiv
+    prefer_latex_analysis: true       # Prefer LaTeX source over PDF for parsing
+
+# ---- LLM Configuration (REQUIRED) ----
+# type: "openai"  — requires OPENAI_API_KEY environment variable
+# type: "local"   — requires local LLM server (vLLM, Ollama) at providers.yaml endpoint
+# type: "mock"    — TESTING ONLY. Prohibited for production research tasks.
+llm:
+  type: "openai"
+
+# ---- Experiment Configuration (drives Modules 07-09) ----
+experiment:
+  method: "samra"                     # Method backend name
+
+  synthetic:                          # Synthetic experiment settings (Module 08)
+    num_samples: 100
+    seed: 42
+
+  real:                               # Real experiment settings (Module 09)
+    checkpoint_dir: "checkpoints"
+    resume_from_checkpoint: false
+    seed: 42
+
+# ---- Analysis Configuration (Module 10) ----
+analysis:
+  output_dir: "output/analysis"
+  significance_level: 0.05
+
+# ---- Output Directories (Modules 11-13) ----
+output:
+  figure_table_dir: "output/figures_tables"
+  paper_dir: "output/paper"
+  reference_dir: "output/references"
+
+# ---- Paper Configuration (Modules 12-13) ----
+paper:
+  min_references: 5
+
+# ---- Optional: Paper Style (Module 12) ----
+# paper_style:
+#   venue: "CVPR"
+#   style: "ieee"
+#   page_limit: 10
+#   citation_style: "numeric"

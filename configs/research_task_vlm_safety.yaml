@@ -1,0 +1,78 @@
+# Research Task Configuration — VLM Safety
+# Phase 4: First real research task
+# Topic: Visual Large Model Safety
+
+task_id: "VLM_Safety_001"
+
+# Research topic
+topic: "Visual Large Model Safety: Robust Alignment and Adversarial Defense for Vision-Language Models"
+
+# Keywords for literature search
+keywords:
+  - "vision-language model safety"
+  - "visual large language model security"
+  - "multimodal jailbreak attack"
+  - "adversarial attack on vision-language models"
+  - "VLM alignment"
+  - "multimodal safety benchmark"
+  - "robust vision-language learning"
+  - "adversarial robustness"
+  - "safety alignment of large multimodal models"
+  - "trustworthy multimodal AI"
+
+# Target venues
+target_venue:
+  - CVPR
+  - ICCV
+  - NeurIPS
+  - ICLR
+
+# Domain
+domain: "computer_vision"
+
+# Experiment mode (synthetic = CPU simulation, no GPU required)
+experiment_mode: synthetic
+
+# Literature search settings
+literature:
+  databases:
+    - arxiv
+    - semantic_scholar
+  max_papers: 100
+  min_papers: 50
+  year_range:
+    start: 2020
+    end: 2026
+  prefer_latex: true  # Phase 4: prefer ArXiv LaTeX source over PDF
+
+# LLM settings (Phase 4: Dual-model — gemma4:26b for paper generation)
+# Module 12 creates its own provider from this config
+# Field names must match LLMProviderFactory expectations (type, not provider)
+llm:
+  type: ollama
+  model: gemma4:26b
+  endpoint: http://localhost:11434/v1
+  temperature: 0.7
+  max_tokens: 8192
+  timeout: 300
+
+# Figure settings (Phase 4: Mermaid source code)
+figure:
+  method: mermaid
+  output_dir: figures/source
+  generate_prompts: true
+
+# Human-in-the-loop settings
+human_in_loop:
+  enabled: true
+  pause_at:
+    - "05"  # Innovation reasoning
+    - "06"  # Method design
+    - "14"  # Reviewer
+  feedback_dir: human_feedback
+
+# Output settings
+output:
+  paper_format: ["md", "tex", "docx"]
+  figure_format: ["svg", "pdf", "mmd"]
+  supplementary: true

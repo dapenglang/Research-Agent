@@ -1,0 +1,34 @@
+# Figure Generation Configuration
+# Phase 4: Mermaid source code + ChatGPT/Gemini drawing prompts
+
+# Drawing method (mermaid | drawio | matplotlib)
+method: mermaid
+
+# Mermaid source output directory
+mermaid_output_dir: "figures/source"
+
+# Mermaid files to generate
+mermaid_files:
+  method_architecture:
+    filename: "method_architecture.mmd"
+    description: "Method architecture diagram showing the overall framework"
+    diagram_type: "flowchart"
+  experiment_pipeline:
+    filename: "experiment_pipeline.mmd"
+    description: "Experiment pipeline diagram showing data flow"
+    diagram_type: "flowchart"
+
+# Also generate drawing prompts for external tools
+generate_drawing_prompts: true
+drawing_prompt_targets:
+  - chatgpt
+  - gemini
+drawing_prompt_dir: "figures/source/prompts"
+
+# Fallback: use matplotlib for data plots (not architecture diagrams)
+matplotlib_fallback: true
+matplotlib_output_dir: "figures/plots"
+
+# Quality settings
+figure_format: ["svg", "pdf"]
+dpi: 300
