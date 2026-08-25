@@ -1,0 +1,45 @@
+module_id: "05"
+module_name: "Innovation & Novelty Reasoning"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Evaluates gap candidates for novelty and feasibility, generating innovation candidates and selecting a final research direction with justified reasoning."
+dependencies:
+  upstream:
+      - "03"
+      - "04"
+  downstream:
+      - "06"
+inputs:
+  required:
+      - "gap_candidates.json"
+      - "paper_analysis.json"
+  optional:
+      - "contradiction_map.json"
+      - "trend_analysis.json"
+outputs:
+      - "innovation_candidates.json"
+      - "novelty_analysis.md"
+      - "final_research_direction.md"
+quality_metrics:
+  hard_requirements:
+      - "At least 1 innovation candidate generated"
+      - "final_research_direction.md has selected_direction and justification"
+      - "Every candidate has novelty_score and feasibility_score"
+  soft_thresholds:
+      - "Prefer >= 3 innovation candidates evaluated"
+      - "Prefer top candidate novelty_score >= 0.7"
+validation:
+  input_validation:
+      - "gap_candidates.json exists with at least 1 gap"
+      - "paper_analysis.json exists with at least 1 analysis"
+  output_validation:
+      - "innovation_candidates.json has candidates with all score fields"
+      - "final_research_direction.md references a candidate from the list"
+      - "Scores are in [0.0, 1.0] range"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+

@@ -1,0 +1,44 @@
+module_id: "04"
+module_name: "Research Landscape & Gap Analysis"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Synthesizes per-paper analyses into a research landscape, building taxonomies, trend analysis, contradiction maps, and identifying gap candidates for innovation."
+dependencies:
+  upstream:
+      - "03"
+  downstream:
+      - "05"
+inputs:
+  required:
+      - "paper_analysis.json"
+  optional:
+      - "literature_analysis_index.jsonl"
+outputs:
+      - "research_landscape.md"
+      - "taxonomy.json"
+      - "trend_analysis.json"
+      - "contradiction_map.json"
+      - "gap_candidates.json"
+quality_metrics:
+  hard_requirements:
+      - "taxonomy.json has at least 1 category"
+      - "gap_candidates.json has at least 1 gap"
+      - "research_landscape.md is non-empty"
+  soft_thresholds:
+      - "Prefer >= 3 gap candidates identified"
+      - "Prefer >= 2 contradictions mapped"
+validation:
+  input_validation:
+      - "paper_analysis.json exists and is valid JSON"
+      - "At least 3 paper analyses present for meaningful landscape"
+  output_validation:
+      - "taxonomy.json categories reference valid paper_ids"
+      - "gap_candidates have supporting_papers from input set"
+      - "contradiction_map references valid paper pairs"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
