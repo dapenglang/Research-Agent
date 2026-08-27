@@ -1,8 +1,11 @@
 {
   "completed_days": [
-    1
+    1,
+    2,
+    3,
+    4
   ],
-  "current_day": 2,
+  "current_day": 5,
   "start_date": "2026-08-24",
   "repo_url": "https://github.com/dapenglang/Research-Agent.git"
 }
