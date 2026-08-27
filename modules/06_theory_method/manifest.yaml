@@ -1,0 +1,48 @@
+module_id: "06"
+module_name: "Theory & Method Design"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Designs the theoretical framework, method specification, mathematical formulation, and algorithm design based on the selected research direction."
+dependencies:
+  upstream:
+      - "05"
+  downstream:
+      - "07"
+      - "08"
+      - "09"
+      - "11"
+inputs:
+  required:
+      - "final_research_direction.md"
+  optional:
+      - "innovation_candidates.json"
+outputs:
+      - "method_spec.json"
+      - "theory_framework.md"
+      - "method_design.md"
+      - "mathematical_formulation.md"
+      - "algorithm_design.md"
+quality_metrics:
+  hard_requirements:
+      - "method_spec.json has method_name, components, input_schema, output_schema"
+      - "theory_framework.md has assumptions and propositions"
+      - "mathematical_formulation.md has at least 1 equation with LaTeX"
+      - "algorithm_design.md has at least 1 algorithm with pseudocode"
+  soft_thresholds:
+      - "Prefer complexity analysis for each algorithm"
+      - "Prefer >= 3 mathematical equations formalized"
+validation:
+  input_validation:
+      - "final_research_direction.md exists and is non-empty"
+      - "selected_direction is present"
+  output_validation:
+      - "method_spec.json components are non-empty"
+      - "Each algorithm has pseudocode"
+      - "Each equation has LaTeX representation"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
