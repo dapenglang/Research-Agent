@@ -1,0 +1,21 @@
+{
+  "decision": "major_revision",
+  "reviewer_comments": [
+    {
+      "reviewer": "reviewer_1",
+      "rating": "unknown",
+      "section": "Reviewer 1"
+    },
+    {
+      "reviewer": "reviewer_2",
+      "rating": "unknown",
+      "section": "Reviewer 2"
+    },
+    {
+      "reviewer": "reviewer_3",
+      "rating": "unknown",
+      "section": "Reviewer 3"
+    }
+  ],
+  "timestamp": "2026-08-17T10:28:18.844744"
+}

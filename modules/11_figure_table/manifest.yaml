@@ -1,0 +1,61 @@
+module_id: "11"
+module_name: "Figure & Table Generation"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Generates publication-quality figures and tables from experiment results, method specs, and external data. Produces SVG/PDF figures with source data, plotting specs, and captions. Supports external data with data_origin='external'."
+dependencies:
+  upstream:
+      - "06"
+      - "07"
+      - "08"
+      - "09"
+      - "external"
+  downstream:
+      - "12"
+inputs:
+  required:
+      - "method_spec.json"
+      - "paper_figure_plan.yaml"
+  optional:
+      - "synthetic_results/"
+      - "experiments/<task_id>/"
+      - "external data (xlsx/csv/json)"
+outputs:
+      - "figures/*.svg"
+      - "figures/*.pdf"
+      - "figures/source_data/"
+      - "figures/plotting_specs/"
+      - "figures/raster/"
+      - "tables/*.xlsx"
+      - "tables/*.csv"
+      - "tables/*.tex"
+      - "captions/captions.yaml"
+quality_metrics:
+  hard_requirements:
+      - "Every figure in paper_figure_plan has a corresponding output file"
+      - "Every table in paper_figure_plan has a corresponding output file"
+      - "captions.yaml has entries for all figures and tables"
+      - "External data is tagged with data_origin='external'"
+      - "Figures are produced in both SVG and PDF (vector formats)"
+  soft_thresholds:
+      - "Prefer source_data/ preserved for each figure"
+      - "Prefer plotting_specs/ for reproducibility"
+      - "Prefer raster/ versions for preview"
+validation:
+  input_validation:
+      - "method_spec.json exists"
+      - "paper_figure_plan.yaml exists with figures and tables"
+      - "Data sources referenced in plan exist (synthetic_results/ or experiments/)"
+  output_validation:
+      - "All figure IDs from plan have SVG and PDF outputs"
+      - "All table IDs from plan have at least 1 format output"
+      - "captions.yaml covers all figure and table IDs"
+      - "data_origin is set on all output files"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "Supports external data with data_origin='external'."

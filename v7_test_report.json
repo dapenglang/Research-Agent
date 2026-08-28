@@ -1,0 +1,287 @@
+{
+  "version": "v7",
+  "timestamp": "2026-08-16 13:30:45",
+  "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+  "configs": {
+    "experiment_mode.yaml": "OK",
+    "llm_routing.yaml": "OK",
+    "machine.yaml": "OK",
+    "model_registry.yaml": "OK",
+    "providers.yaml": "OK",
+    "research_task_template.yaml": "OK",
+    "storage.yaml": "OK"
+  },
+  "llm_runtime": {
+    "status": "ok",
+    "providers": {
+      "openai": {
+        "type": "openai",
+        "model": "gpt-4",
+        "available": false
+      },
+      "deepseek": {
+        "type": "deepseek",
+        "model": "deepseek-chat",
+        "available": false
+      },
+      "local": {
+        "type": "local",
+        "model": "Qwen2.5-7B-Instruct",
+        "available": true
+      }
+    }
+  },
+  "memory_system": {
+    "memory_dir_exists": true,
+    "subdirs": [
+      "datasets",
+      "experiments",
+      "failed_attempts",
+      "methods",
+      "papers"
+    ],
+    "total_files": 0
+  },
+  "task_001": {
+    "task": "task_001.yaml",
+    "status": "completed",
+    "elapsed_seconds": 40.08,
+    "modules": [
+      {
+        "module_id": "01",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "02",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 402
+      },
+      {
+        "module_id": "02_5",
+        "status": "PASS",
+        "data_origin": "paper_asset_extraction",
+        "output_file_count": 1
+      },
+      {
+        "module_id": "03",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "04",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "05",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 3
+      },
+      {
+        "module_id": "06",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "07",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 4
+      },
+      {
+        "module_id": "08",
+        "status": "PASS",
+        "data_origin": "synthetic",
+        "output_file_count": 1
+      },
+      {
+        "module_id": "09",
+        "status": "SKIPPED",
+        "data_origin": "skipped",
+        "output_file_count": 0
+      },
+      {
+        "module_id": "10",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 6
+      },
+      {
+        "module_id": "11",
+        "status": "PASS",
+        "data_origin": "external",
+        "output_file_count": 14
+      },
+      {
+        "module_id": "12",
+        "status": "PASS",
+        "data_origin": "template",
+        "output_file_count": 3
+      },
+      {
+        "module_id": "13",
+        "status": "WARNING",
+        "data_origin": "unknown",
+        "output_file_count": 4
+      }
+    ],
+    "summary": {
+      "total": 14,
+      "passed": 12,
+      "warnings": 1,
+      "failed": 0,
+      "skipped": 1
+    },
+    "provenance_count": 13
+  },
+  "task_002": {
+    "task": "task_002.yaml",
+    "status": "completed",
+    "elapsed_seconds": 26.22,
+    "modules": [
+      {
+        "module_id": "01",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "02",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 402
+      },
+      {
+        "module_id": "02_5",
+        "status": "PASS",
+        "data_origin": "paper_asset_extraction",
+        "output_file_count": 1
+      },
+      {
+        "module_id": "03",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "04",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "05",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 3
+      },
+      {
+        "module_id": "06",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 5
+      },
+      {
+        "module_id": "07",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 4
+      },
+      {
+        "module_id": "08",
+        "status": "PASS",
+        "data_origin": "synthetic",
+        "output_file_count": 1
+      },
+      {
+        "module_id": "09",
+        "status": "SKIPPED",
+        "data_origin": "skipped",
+        "output_file_count": 0
+      },
+      {
+        "module_id": "10",
+        "status": "PASS",
+        "data_origin": "unknown",
+        "output_file_count": 6
+      },
+      {
+        "module_id": "11",
+        "status": "PASS",
+        "data_origin": "external",
+        "output_file_count": 14
+      },
+      {
+        "module_id": "12",
+        "status": "PASS",
+        "data_origin": "template",
+        "output_file_count": 3
+      },
+      {
+        "module_id": "13",
+        "status": "WARNING",
+        "data_origin": "unknown",
+        "output_file_count": 4
+      }
+    ],
+    "summary": {
+      "total": 14,
+      "passed": 12,
+      "warnings": 1,
+      "failed": 0,
+      "skipped": 1
+    },
+    "provenance_count": 13
+  },
+  "outputs": {
+    "paper_dir_exists": true,
+    "paper_files": [
+      "paper\\task_001_vlm_safety\\paper.md",
+      "paper\\task_001_vlm_safety\\assets\\paper_assets.json",
+      "paper\\task_001_vlm_safety\\latex\\paper.tex",
+      "paper\\task_001_vlm_safety\\word\\paper.docx"
+    ],
+    "ref_dir_exists": false,
+    "fig_dir_exists": true,
+    "fig_files": [
+      "figures_tables\\task_001_vlm_safety\\captions\\captions.yaml",
+      "figures_tables\\task_001_vlm_safety\\figures\\fig_1.svg",
+      "figures_tables\\task_001_vlm_safety\\figures\\fig_2.svg",
+      "figures_tables\\task_001_vlm_safety\\figures\\fig_3.svg",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_1.csv",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_1.tex",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_2.csv",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_2.tex",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_3.csv",
+      "figures_tables\\task_001_vlm_safety\\tables\\tab_3.tex",
+      "figures_tables\\task_001_vlm_safety\\figures\\plotting_specs\\fig_1_spec.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\plotting_specs\\fig_2_spec.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\plotting_specs\\fig_3_spec.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\raster\\fig_1.pdf",
+      "figures_tables\\task_001_vlm_safety\\figures\\raster\\fig_2.pdf",
+      "figures_tables\\task_001_vlm_safety\\figures\\raster\\fig_3.pdf",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\fig_1_source.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\fig_2_source.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\fig_3_source.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\manifest.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\tab_1_source.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\tab_2_source.json",
+      "figures_tables\\task_001_vlm_safety\\figures\\source_data\\tab_3_source.json"
+    ],
+    "analysis_dir_exists": true,
+    "analysis_files": [
+      "analysis\\task_001_vlm_safety\\analysis_report.json",
+      "analysis\\task_001_vlm_safety\\claim_evidence_mapping.md",
+      "analysis\\task_001_vlm_safety\\decision.json",
+      "analysis\\task_001_vlm_safety\\revision_recommendation.md",
+      "analysis\\task_001_vlm_safety\\statistical_analysis.md"
+    ]
+  }
+}

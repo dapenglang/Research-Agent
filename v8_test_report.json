@@ -1,0 +1,68 @@
+{
+  "version": "v8",
+  "timestamp": "2026-08-16 15:37:20",
+  "tests": [
+    {
+      "test": "Test 1: No API Key",
+      "passed": true,
+      "details": {
+        "openai_available": false,
+        "deepseek_available": false,
+        "message": "System correctly detected missing API keys"
+      }
+    },
+    {
+      "test": "Test 2: API Key Present",
+      "passed": true,
+      "details": {
+        "key_detected": true,
+        "provider_name": "DeepSeekProvider(model=deepseek-chat)",
+        "message": "System correctly detected API key presence"
+      }
+    },
+    {
+      "test": "Test 3: Papers < 50",
+      "passed": true,
+      "details": {
+        "paper_count": 0,
+        "pipeline_status": "blocked",
+        "gate": "literature_quality",
+        "message": "Literature gate FAILED: 0 papers found, need at least 50. Please add papers to data/literature/pdf/ or data/literature/latex/. Missing: 50 papers."
+      }
+    },
+    {
+      "test": "Test 4: Papers >= 50",
+      "passed": true,
+      "details": {
+        "paper_count": 50,
+        "pipeline_status": "error",
+        "message": "Cannot start: current state is module_executing. Use 'resume' or 'rerun' instead.",
+        "gate_warnings": []
+      }
+    },
+    {
+      "test": "Test 5: Check Scripts",
+      "passed": true,
+      "details": [
+        {
+          "script": "check_literature.py",
+          "exit_code": 1,
+          "stdout": "[FAIL] Literature check failed: 0 papers (need 50)\nMissing: 50 papers\nReport saved to: D:\\Research Agent\\Research_Agent_v3\\Literature_Check_Report.md",
+          "passed": true
+        },
+        {
+          "script": "check_llm.py",
+          "exit_code": 1,
+          "stdout": "LLM Connection FAILED\n  [FAIL] openai: Environment variable OPENAI_API_KEY is not set\n  [FAIL] deepseek: Environment variable DEEPSEEK_API_KEY is not set\n  [FAIL] local: Local LLM call failed: HTTPCon",
+          "passed": true
+        },
+        {
+          "script": "check_research_ready.py",
+          "exit_code": 1,
+          "stdout": "[NOT READY] Some checks failed:\n  [FAIL] 论文数量: Only 0 papers found, need at least 50\nReport: D:\\Research Agent\\Research_Agent_v3\\Research_Readiness_Report.md",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "SAMRA achieves >80% accuracy on benchmark",
+      "pass_criteria": {
+        "accuracy": {
+          "min": 0.8
+        }
+      }
+    },
+    {
+      "id": "C2",
+      "statement": "Adversarial robustness improves by >15%",
+      "pass_criteria": {
+        "robustness_gain": {
+          "min": 0.15
+        }
+      }
+    },
+    {
+      "id": "C3",
+      "statement": "Computational overhead is <20%",
+      "pass_criteria": {
+        "overhead": {
+          "max": 0.2
+        }
+      }
+    }
+  ]
+}

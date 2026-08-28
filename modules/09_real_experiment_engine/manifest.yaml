@@ -1,0 +1,57 @@
+module_id: "09"
+module_name: "Real Experiment Engine"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Executes real-world experiments based on the method specification and experiment matrix. Produces config, code, checkpoints, raw/processed results, logs, and environment snapshots. All output files are tagged with data_origin='real'. SAMRA is an adapter/plugin, NOT built into this module."
+dependencies:
+  upstream:
+      - "06"
+      - "07"
+  downstream:
+      - "10"
+      - "11"
+inputs:
+  required:
+      - "method_spec.json"
+      - "experiment_matrix.yaml"
+      - "claim_evidence_plan.json"
+  optional:
+      []
+outputs:
+      - "experiments/<task_id>/config/"
+      - "experiments/<task_id>/code/"
+      - "experiments/<task_id>/checkpoints/"
+      - "experiments/<task_id>/raw_results/"
+      - "experiments/<task_id>/processed_results/"
+      - "experiments/<task_id>/logs/"
+      - "experiments/<task_id>/environment/"
+      - "experiments/<task_id>/provenance/"
+quality_metrics:
+  hard_requirements:
+      - "All output files MUST have data_origin='real'"
+      - "config/ and raw_results/ directories exist for each experiment"
+      - "provenance/ records adapter_used and environment"
+      - "SAMRA is an adapter/plugin, NOT built into this module"
+  soft_thresholds:
+      - "Prefer checkpoints/ saved for reproducibility"
+      - "Prefer git_commit recorded in provenance"
+validation:
+  input_validation:
+      - "method_spec.json exists and is valid"
+      - "experiment_matrix.yaml exists with real experiments"
+      - "claim_evidence_plan.json exists"
+      - "Only experiments with data_origin='real' are processed"
+  output_validation:
+      - "raw_results have data_origin='real'"
+      - "processed_results have data_origin='real'"
+      - "provenance has data_origin='real'"
+      - "environment/ has requirements.txt"
+      - "All real experiments from matrix are represented"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "NOTE: SAMRA is an adapter/plugin, NOT built into this module."

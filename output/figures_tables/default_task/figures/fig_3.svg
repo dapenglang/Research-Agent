@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <rect width="600" height="400" fill="white"/>
+  <text x="20" y="30" font-size="16" font-weight="bold">fig_3</text>
+  <text x="20" y="50" font-size="12">Type: line_chart</text>
+  <text x="20" y="70" font-size="12">Data Origin: external</text>
+</svg>

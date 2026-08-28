@@ -3,9 +3,11 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
   ],
-  "current_day": 5,
+  "current_day": 7,
   "start_date": "2026-08-24",
   "repo_url": "https://github.com/dapenglang/Research-Agent.git"
 }

@@ -1,0 +1,2417 @@
+﻿Folder PATH listing for volume �¼Ӿ�
+Volume serial number is 000000AA 140C:2C21
+D:.
+|   environment.yml
+|   environment_validation_report.md
+|   Literature_Check_Report.md
+|   LLM_Error_Report.md
+|   papers_db.json
+|   Phase1_Implementation_Report.md
+|   Phase2_Implementation_Report.md
+|   Phase3_Implementation_Report.md
+|   pipeline_result.json
+|   pipeline_test_output.json
+|   project_tree.txt
+|   requirements.txt
+|   Research_Agent_v5_Pre_Refactor_Audit_Report.md
+|   Research_Agent_v7_Final_Report.md
+|   Research_Agent_v8.2.2_Final_Report.md
+|   Research_Agent_v8.2_Final_Report.md
+|   Research_Agent_v8_Final_Report.md
+|   Research_Readiness_Report.md
+|   Research_Task_Config_Fix_Report.md
+|   run_phase1_test.py
+|   run_phase2_test.py
+|   run_v7_tests.py
+|   run_v8.2.2_tests.py
+|   run_v8.2_tests.py
+|   run_v8_tests.py
+|   START_HERE.md
+|   v7_test_report.json
+|   v8.2_test_report.json
+|   v8.2_test_report.md
+|   v8_test_report.json
+|   VERSION.md
+|   __init__.py
+|   
++---.pytest_cache
+|   |   .gitignore
+|   |   CACHEDIR.TAG
+|   |   README.md
+|   |   
+|   \---v
+|       \---cache
+|               lastfailed
+|               nodeids
+|               
++---adapters
+|       method_backend_interface.py
+|       samra_adapter.py
+|       __init__.py
+|       
++---cli
+|       cli.py
+|       __init__.py
+|       
++---configs
+|       dependency_policy.yaml
+|       environment.yaml
+|       experiment_mode.yaml
+|       external_dependency.yaml
+|       llm.yaml
+|       llm_routing.yaml
+|       machine.yaml
+|       model_registry.yaml
+|       providers.yaml
+|       research_task.yaml
+|       research_task_template.yaml
+|       storage.yaml
+|       
++---core
+|   |   __init__.py
+|   |   
+|   +---contracts
+|   |       data_contract.py
+|   |       module_contract.py
+|   |       __init__.py
+|   |       
+|   +---exceptions
+|   |       exceptions.py
+|   |       __init__.py
+|   |       
+|   +---provenance
+|   |       provenance.py
+|   |       __init__.py
+|   |       
+|   +---state
+|   |       checkpoint.py
+|   |       state_machine.py
+|   |       __init__.py
+|   |       
+|   \---validation
+|           validator.py
+|           __init__.py
+|           
++---data
+|   \---literature
+|       |   literature_database.json
+|       |   Literature_Download_Report.md
+|       |   literature_keyword_statistics.xlsx
+|       |   literature_registry.csv
+|       |   literature_registry.xlsx
+|       |   README.md
+|       |   
+|       +---latex
+|       \---pdf
++---docs
+|   |   Human_Intervention_Guide_CN.md
+|   |   Installation_Guide_CN.md
+|   |   Literature_Preparation_Guide_CN.md
+|   |   Literature_Registry_Guide_CN.md
+|   |   LLM_Configuration_Guide_CN.md
+|   |   MCP_Configuration_Guide_CN.md
+|   |   Module_Interface_Documentation_CN.md
+|   |   README_CN.md
+|   |   Skill_Configuration_Guide_CN.md
+|   |   START_HERE_CN.md
+|   |   Troubleshooting_CN.md
+|   |   
+|   +---01_Deployment
+|   |       Windows_Deployment_Guide.md
+|   |       
+|   +---02_Usage
+|   |       Module_Usage_Guide.md
+|   |       New_Research_Task_Guide.md
+|   |       
+|   +---03_Configuration
+|   |       Configuration_Guide.md
+|   |       LLM_Provider_Guide.md
+|   |       Model_Hub_Guide.md
+|   |       
+|   +---04_Troubleshooting
+|   |       Troubleshooting_Guide.md
+|   |       
+|   +---05_Reference
+|   +---99_Archive
+|   |       ARCHIVE_INDEX.md
+|   |       GPU_A_First_Run_Checklist.md
+|   |       README_GPU_A.md
+|   |       
+|   \---_audit
+|           Document_Inventory.md
+|           
++---human_feedback
+|       innovation_feedback.md
+|       method_feedback.md
+|       README.md
+|       review_response.md
+|       
++---infrastructure
+|   |   research_context_extractor.py
+|   |   __init__.py
+|   |   
+|   +---literature
+|   +---llm
+|   |   |   llm_provider.py
+|   |   |   prompt_manager.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---templates
+|   |           __init__.py
+|   |           
+|   +---llm_runtime
+|   |       runtime.py
+|   |       __init__.py
+|   |       
+|   +---mcp
+|   |       mcp_manager.py
+|   |       mcp_registry.yaml
+|   |       __init__.py
+|   |       
+|   +---memory
+|   |       memory_retriever.py
+|   |       memory_store.py
+|   |       usage_logger.py
+|   |       __init__.py
+|   |       
+|   +---models
+|   |       model_hub.py
+|   |       model_validator.py
+|   |       __init__.py
+|   |       
+|   +---skills
+|   |       installed_skills.json
+|   |       skill_integration.py
+|   |       skill_registry.yaml
+|   |       skill_runtime.py
+|   |       skill_scanner.py
+|   |       __init__.py
+|   |       
+|   +---storage
+|   |       path_resolver.py
+|   |       storage_manager.py
+|   |       __init__.py
+|   |       
+|   \---validation
+|           config_loader.py
+|           __init__.py
+|           
++---intelligence_output
+|       1406.4924v1_analysis.json
+|       1710.00814v1_analysis.json
+|       1712.07107v3_analysis.json
+|       1801.04693v1_analysis.json
+|       1804.08598v3_analysis.json
+|       1810.04866v2_analysis.json
+|       1812.10528v4_analysis.json
+|       1901.01085v1_analysis.json
+|       1901.03006v4_analysis.json
+|       1905.13399v2_analysis.json
+|       1906.06086v2_analysis.json
+|       1906.08663v1_analysis.json
+|       1907.07732v1_analysis.json
+|       1908.07000v3_analysis.json
+|       1909.08072v2_analysis.json
+|       1910.08108v2_analysis.json
+|       2002.04784v2_analysis.json
+|       2003.01279v3_analysis.json
+|       2004.04199v1_analysis.json
+|       2005.06149v1_analysis.json
+|       2005.11626v1_analysis.json
+|       2006.16545v1_analysis.json
+|       2010.01039v2_analysis.json
+|       2101.10562v1_analysis.json
+|       2104.04167v2_analysis.json
+|       2104.09369v1_analysis.json
+|       2104.09630v2_analysis.json
+|       2105.12419v2_analysis.json
+|       2106.13499v1_analysis.json
+|       2107.10302v2_analysis.json
+|       2108.11785v1_analysis.json
+|       2109.01134v6_analysis.json
+|       2110.06166v4_analysis.json
+|       2110.09903v2_analysis.json
+|       2201.05729v3_analysis.json
+|       2202.09061v4_analysis.json
+|       2203.05948v1_analysis.json
+|       2203.10416v1_analysis.json
+|       2204.09397v3_analysis.json
+|       2205.14629v2_analysis.json
+|       2208.00428v1_analysis.json
+|       2208.11613v1_analysis.json
+|       2210.00008v2_analysis.json
+|       2210.04610v5_analysis.json
+|       2210.09263v1_analysis.json
+|       2303.01068v1_analysis.json
+|       2303.15127v1_analysis.json
+|       2303.16378v2_analysis.json
+|       2304.10436v1_analysis.json
+|       2304.10592v2_analysis.json
+|       2305.00866v2_analysis.json
+|       2306.05952v2_analysis.json
+|       2306.09265v1_analysis.json
+|       2307.02055v1_analysis.json
+|       2307.03135v3_analysis.json
+|       2308.14179v1_analysis.json
+|       2309.04041v2_analysis.json
+|       2310.00905v2_analysis.json
+|       2311.06187v2_analysis.json
+|       2401.10657v1_analysis.json
+|       2402.07865v2_analysis.json
+|       2403.18406v1_analysis.json
+|       2403.19838v2_analysis.json
+|       2404.03556v1_analysis.json
+|       2404.05444v1_analysis.json
+|       2404.07214v4_analysis.json
+|       2405.14552v1_analysis.json
+|       2405.19641v1_analysis.json
+|       2406.11801v2_analysis.json
+|       2407.03946v2_analysis.json
+|       2407.13111v1_analysis.json
+|       2408.14879v1_analysis.json
+|       2408.17003v5_analysis.json
+|       2409.15256v1_analysis.json
+|       2410.00982v2_analysis.json
+|       2410.08397v2_analysis.json
+|       2411.11543v4_analysis.json
+|       2411.16162v1_analysis.json
+|       2411.17468v1_analysis.json
+|       2411.18711v4_analysis.json
+|       2411.19103v1_analysis.json
+|       2412.09082v3_analysis.json
+|       2501.06670v2_analysis.json
+|       2501.07923v1_analysis.json
+|       2502.05206v6_analysis.json
+|       2502.09674v4_analysis.json
+|       2502.10486v1_analysis.json
+|       2502.13095v1_analysis.json
+|       2502.13141v1_analysis.json
+|       2503.04743v1_analysis.json
+|       2503.09124v1_analysis.json
+|       2503.11832v5_analysis.json
+|       2504.09480v1_analysis.json
+|       2504.12661v2_analysis.json
+|       2505.16214v2_analysis.json
+|       2505.20279v5_analysis.json
+|       2505.21089v2_analysis.json
+|       2506.05429v1_analysis.json
+|       2506.06444v2_analysis.json
+|       2506.08399v2_analysis.json
+|       2506.11595v1_analysis.json
+|       2506.18985v3_analysis.json
+|       2506.22183v1_analysis.json
+|       2507.07104v2_analysis.json
+|       2507.22398v3_analysis.json
+|       2508.13073v2_analysis.json
+|       2508.19294v2_analysis.json
+|       2509.08285v2_analysis.json
+|       2509.22720v1_analysis.json
+|       2510.02292v1_analysis.json
+|       2510.10140v2_analysis.json
+|       2511.07713v1_analysis.json
+|       2511.20811v1_analysis.json
+|       2601.05059v1_analysis.json
+|       2602.03973v1_analysis.json
+|       2602.18846v2_analysis.json
+|       2603.14219v1_analysis.json
+|       2603.18002v1_analysis.json
+|       2603.19209v1_analysis.json
+|       2603.20985v1_analysis.json
+|       2603.23521v1_analysis.json
+|       2604.00086v2_analysis.json
+|       2604.00314v1_analysis.json
+|       2604.02401v1_analysis.json
+|       2605.22903v1_analysis.json
+|       2606.02564v3_analysis.json
+|       2606.05290v1_analysis.json
+|       2606.10594v1_analysis.json
+|       2606.21194v1_analysis.json
+|       2607.00483v2_analysis.json
+|       2607.07420v2_analysis.json
+|       2607.10797v1_analysis.json
+|       2608.02681v1_analysis.json
+|       2608.07435v1_analysis.json
+|       2608.08734v1_analysis.json
+|       extraction_prompt.md
+|       extraction_quality_report.json
+|       literature_analysis_index.jsonl
+|       Module03_Validation_Report.md
+|       module_manifest.json
+|       paper_analysis.json
+|       paper_analysis.md
+|       paper_database.json
+|       syn_arxiv_91a62134_analysis.json
+|       syn_arxiv_9ec8e5a5_analysis.json
+|       syn_arxiv_b5d81757_analysis.json
+|       syn_arxiv_b63bfe4c_analysis.json
+|       syn_arxiv_d853c67d_analysis.json
+|       syn_openreview_7259c7fa_analysis.json
+|       syn_openreview_7f31725a_analysis.json
+|       syn_openreview_beff9f3d_analysis.json
+|       syn_openreview_eee44510_analysis.json
+|       syn_openreview_ef755cdd_analysis.json
+|       syn_semantic_scholar_13262642_analysis.json
+|       syn_semantic_scholar_68b2f984_analysis.json
+|       syn_semantic_scholar_75d90cee_analysis.json
+|       syn_semantic_scholar_be4c5812_analysis.json
+|       syn_semantic_scholar_f1d157bc_analysis.json
+|       
++---literature
+|   |   __init__.py
+|   |   
+|   +---database
+|   |       paper_database.py
+|   |       __init__.py
+|   |       
+|   +---downloader
+|   |       paper_downloader.py
+|   |       __init__.py
+|   |       
+|   +---extractor
+|   |       paper_extractor.py
+|   |       quality_checker.py
+|   |       __init__.py
+|   |       
+|   +---parser
+|   |       markdown_formatter.py
+|   |       pdf_parser.py
+|   |       section_detector.py
+|   |       __init__.py
+|   |       
+|   \---pipeline
+|           literature_pipeline.py
+|           __init__.py
+|           
++---literature_output
+|       download_queue.json
+|       literature_manifest.json
+|       Module01_Validation_Report.md
+|       module_manifest.json
+|       paper_metadata.jsonl
+|       
++---memory
+|   +---datasets
+|   +---experiments
+|   +---failed_attempts
+|   +---methods
+|   \---papers
++---modules
+|   |   __init__.py
+|   |   
+|   +---01_literature_retrieval
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---02_5_paper_asset_intelligence
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---02_source_acquisition
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---03_literature_intelligence
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---04_research_landscape
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---05_innovation_reasoning
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---06_theory_method
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---07_experiment_planning
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---08_synthetic_experiment_engine
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---09_real_experiment_engine
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---10_result_analysis
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---11_figure_table
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---12_paper_writing
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   +---13_reference_supplementary
+|   |       implementation.py
+|   |       interface.py
+|   |       manifest.yaml
+|   |       schema.py
+|   |       validator.py
+|   |       __init__.py
+|   |       __main__.py
+|   |       
+|   \---14_reviewer_loop
+|           implementation.py
+|           interface.py
+|           manifest.yaml
+|           schema.py
+|           validator.py
+|           __init__.py
+|           __main__.py
+|           
++---orchestrator
+|       pipeline.py
+|       __init__.py
+|       
++---output
+|   +---analysis
+|   |   +---default_task
+|   |   |       analysis_report.json
+|   |   |       claim_evidence_mapping.md
+|   |   |       decision.json
+|   |   |       revision_recommendation.md
+|   |   |       statistical_analysis.md
+|   |   |       
+|   |   \---task_001_vlm_safety
+|   |           analysis_report.json
+|   |           claim_evidence_mapping.md
+|   |           decision.json
+|   |           revision_recommendation.md
+|   |           statistical_analysis.md
+|   |           
+|   +---default_task
+|   |   \---module_14
+|   |           review_decision.json
+|   |           review_report.md
+|   |           revision_recommendations.md
+|   |           
+|   +---figures_tables
+|   |   +---default_task
+|   |   |   +---captions
+|   |   |   |       captions.yaml
+|   |   |   |       
+|   |   |   +---figures
+|   |   |   |   |   fig_1.svg
+|   |   |   |   |   fig_2.svg
+|   |   |   |   |   fig_3.svg
+|   |   |   |   |   
+|   |   |   |   +---plotting_specs
+|   |   |   |   |       fig_1_spec.json
+|   |   |   |   |       fig_2_spec.json
+|   |   |   |   |       fig_3_spec.json
+|   |   |   |   |       
+|   |   |   |   +---raster
+|   |   |   |   |       fig_1.pdf
+|   |   |   |   |       fig_2.pdf
+|   |   |   |   |       fig_3.pdf
+|   |   |   |   |       
+|   |   |   |   \---source_data
+|   |   |   |           fig_1_source.json
+|   |   |   |           fig_2_source.json
+|   |   |   |           fig_3_source.json
+|   |   |   |           manifest.json
+|   |   |   |           tab_1_source.json
+|   |   |   |           tab_2_source.json
+|   |   |   |           tab_3_source.json
+|   |   |   |           
+|   |   |   \---tables
+|   |   |           tab_1.csv
+|   |   |           tab_1.tex
+|   |   |           tab_2.csv
+|   |   |           tab_2.tex
+|   |   |           tab_3.csv
+|   |   |           tab_3.tex
+|   |   |           
+|   |   \---task_001_vlm_safety
+|   |       +---captions
+|   |       |       captions.yaml
+|   |       |       
+|   |       +---figures
+|   |       |   |   fig_1.svg
+|   |       |   |   fig_2.svg
+|   |       |   |   fig_3.svg
+|   |       |   |   
+|   |       |   +---plotting_specs
+|   |       |   |       fig_1_spec.json
+|   |       |   |       fig_2_spec.json
+|   |       |   |       fig_3_spec.json
+|   |       |   |       
+|   |       |   +---raster
+|   |       |   |       fig_1.pdf
+|   |       |   |       fig_2.pdf
+|   |       |   |       fig_3.pdf
+|   |       |   |       
+|   |       |   \---source_data
+|   |       |           fig_1_source.json
+|   |       |           fig_2_source.json
+|   |       |           fig_3_source.json
+|   |       |           manifest.json
+|   |       |           tab_1_source.json
+|   |       |           tab_2_source.json
+|   |       |           tab_3_source.json
+|   |       |           
+|   |       \---tables
+|   |               tab_1.csv
+|   |               tab_1.tex
+|   |               tab_2.csv
+|   |               tab_2.tex
+|   |               tab_3.csv
+|   |               tab_3.tex
+|   |               
+|   +---module_14
+|   |       review_decision.json
+|   |       review_report.md
+|   |       revision_recommendations.md
+|   |       
+|   +---paper
+|   |   +---default_task
+|   |   |   |   paper.md
+|   |   |   |   
+|   |   |   +---assets
+|   |   |   |       paper_assets.json
+|   |   |   |       
+|   |   |   +---latex
+|   |   |   |       paper.tex
+|   |   |   |       
+|   |   |   \---word
+|   |   |           paper.docx
+|   |   |           
+|   |   \---task_001_vlm_safety
+|   |       |   paper.md
+|   |       |   
+|   |       +---assets
+|   |       |       paper_assets.json
+|   |       |       
+|   |       +---latex
+|   |       |       paper.tex
+|   |       |       
+|   |       \---word
+|   |               paper.docx
+|   |               
+|   \---references
+|       \---default_task
+|               citation_validation_report.md
+|               references.bib
+|               supplementary.docx
+|               supplementary.tex
+|               
++---papers
+|   +---1406.4924v1
+|   |       original.pdf
+|   |       
+|   +---1710.00814v1
+|   |       original.pdf
+|   |       
+|   +---1712.07107v3
+|   |       original.pdf
+|   |       
+|   +---1801.04693v1
+|   |       original.pdf
+|   |       
+|   +---1804.08598v3
+|   |       original.pdf
+|   |       
+|   +---1810.04866v2
+|   |       original.pdf
+|   |       
+|   +---1812.10528v4
+|   |       original.pdf
+|   |       
+|   +---1901.01085v1
+|   |       original.pdf
+|   |       
+|   +---1901.03006v4
+|   |       original.pdf
+|   |       
+|   +---1905.13399v2
+|   |       original.pdf
+|   |       
+|   +---1906.06086v2
+|   |       original.pdf
+|   |       
+|   +---1906.08663v1
+|   |       original.pdf
+|   |       
+|   +---1907.07732v1
+|   |       original.pdf
+|   |       
+|   +---1908.07000v3
+|   |       original.pdf
+|   |       
+|   +---1909.08072v2
+|   |       original.pdf
+|   |       
+|   +---1910.08108v2
+|   |       original.pdf
+|   |       
+|   +---2002.04784v2
+|   |       original.pdf
+|   |       
+|   +---2003.01279v3
+|   |       original.pdf
+|   |       
+|   +---2004.04199v1
+|   |       original.pdf
+|   |       
+|   +---2005.06149v1
+|   |       original.pdf
+|   |       
+|   +---2005.11626v1
+|   |       original.pdf
+|   |       
+|   +---2006.16545v1
+|   |       original.pdf
+|   |       
+|   +---2010.01039v2
+|   |       original.pdf
+|   |       
+|   +---2101.10562v1
+|   |       original.pdf
+|   |       
+|   +---2104.04167v2
+|   |       original.pdf
+|   |       
+|   +---2104.09369v1
+|   |       original.pdf
+|   |       
+|   +---2104.09630v2
+|   |       original.pdf
+|   |       
+|   +---2105.12419v2
+|   |       original.pdf
+|   |       
+|   +---2106.13499v1
+|   |       original.pdf
+|   |       
+|   +---2107.10302v2
+|   |       original.pdf
+|   |       
+|   +---2108.11785v1
+|   |       original.pdf
+|   |       
+|   +---2109.01134v6
+|   |       original.pdf
+|   |       
+|   +---2110.06166v4
+|   |       original.pdf
+|   |       
+|   +---2110.09903v2
+|   |       original.pdf
+|   |       
+|   +---2201.05729v3
+|   |       original.pdf
+|   |       
+|   +---2202.09061v4
+|   |       original.pdf
+|   |       
+|   +---2203.05948v1
+|   |       original.pdf
+|   |       
+|   +---2203.10416v1
+|   |       original.pdf
+|   |       
+|   +---2204.09397v3
+|   |       original.pdf
+|   |       
+|   +---2205.14629v2
+|   |       original.pdf
+|   |       
+|   +---2208.00428v1
+|   |       original.pdf
+|   |       
+|   +---2208.11613v1
+|   |       original.pdf
+|   |       
+|   +---2210.00008v2
+|   |       original.pdf
+|   |       
+|   +---2210.04610v5
+|   |       original.pdf
+|   |       
+|   +---2210.09263v1
+|   |       original.pdf
+|   |       
+|   +---2303.01068v1
+|   |       original.pdf
+|   |       
+|   +---2303.15127v1
+|   |       original.pdf
+|   |       
+|   +---2303.16378v2
+|   |       original.pdf
+|   |       
+|   +---2304.10436v1
+|   |       original.pdf
+|   |       
+|   +---2304.10592v2
+|   |       original.pdf
+|   |       
+|   +---2305.00866v2
+|   |       original.pdf
+|   |       
+|   +---2306.05952v2
+|   |       original.pdf
+|   |       
+|   +---2306.09265v1
+|   |       original.pdf
+|   |       
+|   +---2307.02055v1
+|   |       original.pdf
+|   |       
+|   +---2307.03135v3
+|   |       original.pdf
+|   |       
+|   +---2308.14179v1
+|   |       original.pdf
+|   |       
+|   +---2309.04041v2
+|   |       original.pdf
+|   |       
+|   +---2310.00905v2
+|   |       original.pdf
+|   |       
+|   +---2311.06187v2
+|   |       original.pdf
+|   |       
+|   +---2401.10657v1
+|   |       original.pdf
+|   |       
+|   +---2402.07865v2
+|   +---2403.18406v1
+|   |       original.pdf
+|   |       
+|   +---2403.19838v2
+|   |       original.pdf
+|   |       
+|   +---2404.03556v1
+|   |       original.pdf
+|   |       
+|   +---2404.05444v1
+|   |       original.pdf
+|   |       
+|   +---2404.07214v4
+|   |       original.pdf
+|   |       
+|   +---2405.14552v1
+|   +---2405.19641v1
+|   +---2406.11801v2
+|   |       original.pdf
+|   |       
+|   +---2407.03946v2
+|   |       original.pdf
+|   |       
+|   +---2407.13111v1
+|   |       original.pdf
+|   |       
+|   +---2408.14879v1
+|   |       original.pdf
+|   |       
+|   +---2408.17003v5
+|   |       original.pdf
+|   |       
+|   +---2409.15256v1
+|   |       original.pdf
+|   |       
+|   +---2410.00982v2
+|   |       original.pdf
+|   |       
+|   +---2410.08397v2
+|   |       original.pdf
+|   |       
+|   +---2411.11543v4
+|   |       original.pdf
+|   |       
+|   +---2411.16162v1
+|   |       original.pdf
+|   |       
+|   +---2411.17468v1
+|   |       original.pdf
+|   |       
+|   +---2411.18711v4
+|   |       original.pdf
+|   |       
+|   +---2411.19103v1
+|   |       original.pdf
+|   |       
+|   +---2412.09082v3
+|   |       original.pdf
+|   |       
+|   +---2501.06670v2
+|   |       original.pdf
+|   |       
+|   +---2501.07923v1
+|   |       original.pdf
+|   |       
+|   +---2502.05206v6
+|   +---2502.09674v4
+|   |       original.pdf
+|   |       
+|   +---2502.10486v1
+|   |       original.pdf
+|   |       
+|   +---2502.13095v1
+|   |       original.pdf
+|   |       
+|   +---2502.13141v1
+|   |       original.pdf
+|   |       
+|   +---2503.04743v1
+|   |       original.pdf
+|   |       
+|   +---2503.09124v1
+|   |       original.pdf
+|   |       
+|   +---2503.11832v5
+|   |       original.pdf
+|   |       
+|   +---2504.09480v1
+|   |       original.pdf
+|   |       
+|   +---2504.12661v2
+|   |       original.pdf
+|   |       
+|   +---2505.16214v2
+|   |       original.pdf
+|   |       
+|   +---2505.20279v5
+|   |       original.pdf
+|   |       
+|   +---2505.21089v2
+|   |       original.pdf
+|   |       
+|   +---2506.05429v1
+|   |       original.pdf
+|   |       
+|   +---2506.06444v2
+|   +---2506.08399v2
+|   |       original.pdf
+|   |       
+|   +---2506.11595v1
+|   |       original.pdf
+|   |       
+|   +---2506.18985v3
+|   |       original.pdf
+|   |       
+|   +---2506.22183v1
+|   +---2507.07104v2
+|   |       original.pdf
+|   |       
+|   +---2507.22398v3
+|   |       original.pdf
+|   |       
+|   +---2508.13073v2
+|   |       original.pdf
+|   |       
+|   +---2508.19294v2
+|   |       original.pdf
+|   |       
+|   +---2509.08285v2
+|   |       original.pdf
+|   |       
+|   +---2509.22720v1
+|   |       original.pdf
+|   |       
+|   +---2510.02292v1
+|   |       original.pdf
+|   |       
+|   +---2510.10140v2
+|   |       original.pdf
+|   |       
+|   +---2511.07713v1
+|   |       original.pdf
+|   |       
+|   +---2511.20811v1
+|   |       original.pdf
+|   |       
+|   +---2601.05059v1
+|   |       original.pdf
+|   |       
+|   +---2602.03973v1
+|   |       original.pdf
+|   |       
+|   +---2602.18846v2
+|   |       original.pdf
+|   |       
+|   +---2603.14219v1
+|   |       original.pdf
+|   |       
+|   +---2603.18002v1
+|   |       original.pdf
+|   |       
+|   +---2603.19209v1
+|   |       original.pdf
+|   |       
+|   +---2603.20985v1
+|   |       original.pdf
+|   |       
+|   +---2603.23521v1
+|   |       original.pdf
+|   |       
+|   +---2604.00086v2
+|   |       original.pdf
+|   |       
+|   +---2604.00314v1
+|   |       original.pdf
+|   |       
+|   +---2604.02401v1
+|   |       original.pdf
+|   |       
+|   +---2605.22903v1
+|   |       original.pdf
+|   |       
+|   +---2606.02564v3
+|   |       original.pdf
+|   |       
+|   +---2606.05290v1
+|   |       original.pdf
+|   |       
+|   +---2606.10594v1
+|   |       original.pdf
+|   |       
+|   +---2606.21194v1
+|   |       original.pdf
+|   |       
+|   +---2607.00483v2
+|   +---2607.07420v2
+|   |       original.pdf
+|   |       
+|   +---2607.10797v1
+|   |       original.pdf
+|   |       
+|   +---2608.02681v1
+|   |       original.pdf
+|   |       
+|   +---2608.07435v1
+|   |       original.pdf
+|   |       
+|   +---2608.08734v1
+|   |       original.pdf
+|   |       
+|   +---syn_arxiv_91a62134
+|   +---syn_arxiv_9ec8e5a5
+|   +---syn_arxiv_b5d81757
+|   +---syn_arxiv_b63bfe4c
+|   +---syn_arxiv_d853c67d
+|   +---syn_openreview_7259c7fa
+|   +---syn_openreview_7f31725a
+|   +---syn_openreview_beff9f3d
+|   +---syn_openreview_eee44510
+|   +---syn_openreview_ef755cdd
+|   +---syn_semantic_scholar_13262642
+|   +---syn_semantic_scholar_68b2f984
+|   +---syn_semantic_scholar_75d90cee
+|   +---syn_semantic_scholar_be4c5812
+|   \---syn_semantic_scholar_f1d157bc
++---papers_output
+|   |   Module02_Validation_Report.md
+|   |   module_manifest.json
+|   |   
+|   \---papers
+|       +---1406.4924v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1710.00814v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1712.07107v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1801.04693v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1804.08598v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1810.04866v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1812.10528v4
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1901.01085v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1901.03006v4
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1905.13399v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1906.06086v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1906.08663v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1907.07732v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1908.07000v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1909.08072v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---1910.08108v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2002.04784v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2003.01279v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2004.04199v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2005.06149v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2005.11626v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2006.16545v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2010.01039v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2101.10562v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2104.09369v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2104.09630v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2105.12419v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2106.13499v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2107.10302v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2108.11785v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2110.06166v4
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2110.09903v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2203.05948v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2203.10416v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2204.09397v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2205.14629v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2208.00428v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2208.11613v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2210.00008v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2210.04610v5
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2303.01068v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2303.15127v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2303.16378v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2304.10436v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2305.00866v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2306.05952v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2307.02055v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2310.00905v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2311.06187v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2401.10657v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2402.07865v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2403.18406v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2404.03556v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2404.05444v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2405.14552v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2405.19641v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2406.11801v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2407.03946v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2407.13111v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2408.14879v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2408.17003v5
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2411.11543v4
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2411.16162v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2411.17468v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2501.06670v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2501.07923v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2502.05206v6
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2502.09674v4
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2502.10486v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2502.13095v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2502.13141v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2503.04743v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2503.09124v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2503.11832v5
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2504.12661v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2505.16214v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2505.20279v5
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2506.06444v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2506.08399v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2506.22183v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2508.13073v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2509.08285v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2510.02292v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2510.10140v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2511.07713v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2511.20811v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2601.05059v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2602.18846v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2603.14219v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2603.18002v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2603.19209v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2604.00314v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2604.02401v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2606.02564v3
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2606.05290v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2607.00483v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   original.pdf
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2607.07420v2
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2608.02681v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       +---2608.07435v1
+|       |   |   citations.json
+|       |   |   equations.json
+|       |   |   figures.json
+|       |   |   metadata.json
+|       |   |   provenance.json
+|       |   |   raw.md
+|       |   |   tables.json
+|       |   |   
+|       |   \---normalized
+|       |           paper.md
+|       |           
+|       \---2608.08734v1
+|           |   citations.json
+|           |   equations.json
+|           |   figures.json
+|           |   metadata.json
+|           |   provenance.json
+|           |   raw.md
+|           |   tables.json
+|           |   
+|           \---normalized
+|                   paper.md
+|                   
++---reasoning
+|   |   __init__.py
+|   |   
+|   +---experiment_designer
+|   |       experiment_designer.py
+|   |       __init__.py
+|   |       
+|   +---gap_analyzer
+|   |       gap_analyzer.py
+|   |       __init__.py
+|   |       
+|   +---hypothesis_generator
+|   |       hypothesis_generator.py
+|   |       __init__.py
+|   |       
+|   +---method_designer
+|   |       method_designer.py
+|   |       __init__.py
+|   |       
+|   \---scientific_reasoner
+|           causal_analyzer.py
+|           contradiction_detector.py
+|           innovation_generator.py
+|           novelty_checker.py
+|           reasoning_graph.py
+|           theory_builder.py
+|           __init__.py
+|           
++---schemas
++---scripts
+|       check_literature.py
+|       check_llm.py
+|       check_mcp.py
+|       check_portability.py
+|       check_research_ready.py
+|       check_skills.py
+|       setup_environment.sh
+|       setup_environment_windows.ps1
+|       
++---state
+|   \---task_002_edge_security
+|           research_state.yaml
+|           
++---tasks
+|       task_001.yaml
+|       task_002.yaml
+|       
++---templates
++---tests
+|   |   test_phase_d_e2e.py
+|   |   test_research_task_config.py
+|   |   test_v3_literature.py
+|   |   test_v3_reasoning.py
+|   |   
+|   +---e2e_output
+|   |   +---analysis
+|   |   |   \---e2e_test_001
+|   |   |           analysis_report.json
+|   |   |           claim_evidence_mapping.md
+|   |   |           decision.json
+|   |   |           revision_recommendation.md
+|   |   |           statistical_analysis.md
+|   |   |           
+|   |   +---figures_tables
+|   |   |   \---e2e_test_001
+|   |   |       +---captions
+|   |   |       |       captions.yaml
+|   |   |       |       
+|   |   |       +---figures
+|   |   |       |   |   fig_accuracy.svg
+|   |   |       |   |   fig_robustness.svg
+|   |   |       |   |   
+|   |   |       |   +---plotting_specs
+|   |   |       |   |       fig_accuracy_spec.json
+|   |   |       |   |       fig_robustness_spec.json
+|   |   |       |   |       
+|   |   |       |   +---raster
+|   |   |       |   |       fig_accuracy.pdf
+|   |   |       |   |       fig_robustness.pdf
+|   |   |       |   |       
+|   |   |       |   \---source_data
+|   |   |       |           fig_accuracy_source.json
+|   |   |       |           fig_robustness_source.json
+|   |   |       |           manifest.json
+|   |   |       |           tbl_main_results_source.json
+|   |   |       |           
+|   |   |       \---tables
+|   |   |               tbl_main_results.csv
+|   |   |               tbl_main_results.tex
+|   |   |               
+|   |   +---paper
+|   |   |   \---e2e_test_001
+|   |   |       |   paper.md
+|   |   |       |   
+|   |   |       +---latex
+|   |   |       |       paper.tex
+|   |   |       |       
+|   |   |       \---word
+|   |   |               paper.docx
+|   |   |               
+|   |   \---references
+|   |       \---e2e_test_001
+|   |               citation_validation_report.md
+|   |               references.bib
+|   |               supplementary.docx
+|   |               supplementary.tex
+|   |               
+|   +---e2e_state
+|   \---e2e_test_data
+|       |   claim_evidence_plan.json
+|       |   method_spec.json
+|       |   paper_figure_plan.yaml
+|       |   paper_metadata.jsonl
+|       |   research_task.yaml
+|       |   
+|       +---experiments
+|       |   \---e2e_test_001
+|       |       \---processed_results
+|       |               metrics.json
+|       |               
+|       \---synthetic_results
+|               metrics.json
+|               
+\---tools
+        module_validator.py
+        __init__.py
+        

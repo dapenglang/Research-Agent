@@ -1,0 +1,381 @@
+{
+  "version": "v8.2",
+  "timestamp": "2026-08-16T19:15:57.617190",
+  "summary": {
+    "passed": 49,
+    "failed": 3,
+    "total": 52
+  },
+  "tests": [
+    {
+      "test": "Python Version",
+      "passed": true,
+      "details": {
+        "version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]"
+      }
+    },
+    {
+      "test": "PyYAML",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "PyTorch",
+      "passed": false,
+      "details": {
+        "note": "not installed (OK for CPU mode)"
+      }
+    },
+    {
+      "test": "Conda Environment",
+      "passed": true,
+      "details": {
+        "env": "not detected"
+      }
+    },
+    {
+      "test": "Skill Scan",
+      "passed": true,
+      "details": {
+        "total_skills": 575
+      }
+    },
+    {
+      "test": "Skill Runtime Init",
+      "passed": true,
+      "details": {
+        "installed": 575
+      }
+    },
+    {
+      "test": "Module 05 Skills",
+      "passed": true,
+      "details": {
+        "count": 6,
+        "names": [
+          "light-idea-generation",
+          "research-ideation",
+          "scientific-brainstorming",
+          "hypothesis-formulation",
+          "novelty-check"
+        ]
+      }
+    },
+    {
+      "test": "Module 14 Skills",
+      "passed": true,
+      "details": {
+        "count": 5,
+        "names": [
+          "academic-paper-reviewer",
+          "paper-self-review",
+          "auto-review-loop-llm",
+          "nature-reviewer",
+          "kill-argument"
+        ]
+      }
+    },
+    {
+      "test": "MCP Manager Init",
+      "passed": true,
+      "details": {
+        "enabled_servers": 5
+      }
+    },
+    {
+      "test": "arxiv MCP",
+      "passed": true,
+      "details": {
+        "configured": true
+      }
+    },
+    {
+      "test": "paper-search MCP",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "drawio MCP",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "chart MCP",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "MCP Config JSON",
+      "passed": true,
+      "details": {
+        "servers": [
+          "arxiv",
+          "paper-search",
+          "drawio",
+          "chart",
+          "fetch"
+        ]
+      }
+    },
+    {
+      "test": "llm.yaml exists",
+      "passed": true,
+      "details": {
+        "path": "D:\\Research Agent\\Research_Agent_v3\\configs\\llm.yaml"
+      }
+    },
+    {
+      "test": "Provider configured",
+      "passed": true,
+      "details": {
+        "provider": "deepseek"
+      }
+    },
+    {
+      "test": "Providers defined",
+      "passed": true,
+      "details": {
+        "providers": [
+          "openai",
+          "deepseek",
+          "qwen",
+          "local"
+        ]
+      }
+    },
+    {
+      "test": "Task routing",
+      "passed": true,
+      "details": {
+        "tasks": [
+          "literature_analysis",
+          "innovation_reasoning",
+          "method_design",
+          "experiment_analysis",
+          "paper_generation",
+          "figure_generation",
+          "reference_checking",
+          "reviewer"
+        ]
+      }
+    },
+    {
+      "test": "LLM API Keys",
+      "passed": false,
+      "details": {
+        "openai": "not set",
+        "deepseek": "not set"
+      }
+    },
+    {
+      "test": "research_task.yaml exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Topic configured",
+      "passed": true,
+      "details": {
+        "topic": "Visual Large Model Safety"
+      }
+    },
+    {
+      "test": "Keywords configured",
+      "passed": true,
+      "details": {
+        "count": 4
+      }
+    },
+    {
+      "test": "Experiment mode",
+      "passed": true,
+      "details": {
+        "mode": "A"
+      }
+    },
+    {
+      "test": "Human-in-loop",
+      "passed": true,
+      "details": {
+        "enabled": true
+      }
+    },
+    {
+      "test": "human_feedback/ exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  innovation_feedback.md",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  method_feedback.md",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  review_response.md",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Module 14 directory",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  __init__.py",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  implementation.py",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  interface.py",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  schema.py",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  validator.py",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "  manifest.yaml",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Module 14 Execute",
+      "passed": true,
+      "details": {
+        "decision": "major_revision"
+      }
+    },
+    {
+      "test": "Review Report Generated",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Revision Recommendations",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Decision Valid",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Module 14 in sequence",
+      "passed": true,
+      "details": {
+        "sequence": [
+          "01",
+          "02",
+          "02_5",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      }
+    },
+    {
+      "test": "MODULE_DIR_MAP has 14",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "MODULE_DIR_MAP has 14",
+      "passed": true,
+      "details": {
+        "dir": "14_reviewer_loop"
+      }
+    },
+    {
+      "test": "IMPL_CLASS_MAP has 14",
+      "passed": true,
+      "details": {
+        "class": "ReviewerLoopModule"
+      }
+    },
+    {
+      "test": "LLM_REQUIRED_MODULES has 14",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "HUMAN_FEEDBACK_MODULES defined",
+      "passed": true,
+      "details": {
+        "modules": {
+          "05": "innovation",
+          "06": "method",
+          "14": "review"
+        }
+      }
+    },
+    {
+      "test": "Literature directories",
+      "passed": true,
+      "details": {
+        "pdf_count": 0,
+        "latex_count": 0,
+        "total": 0
+      }
+    },
+    {
+      "test": "Literature gate (≥50)",
+      "passed": false,
+      "details": {
+        "total": 0,
+        "min_required": 50
+      }
+    },
+    {
+      "test": "Module 02.5 exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Implementation exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "Manifest exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "output/ exists",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "test": "papers/ exists",
+      "passed": true,
+      "details": {}
+    }
+  ]
+}

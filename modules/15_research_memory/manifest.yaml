@@ -1,0 +1,54 @@
+module_id: "15"
+module_name: "research_memory"
+description: >
+  Research memory module. Collects and synthesizes stage reports,
+  decision logs, and lessons learned from all upstream modules into
+  a persistent research memory document for cross-session continuity.
+
+dependencies:
+  upstream:
+    - "01"
+    - "02"
+    - "03"
+    - "04"
+    - "05"
+    - "06"
+    - "07"
+    - "08"
+    - "09"
+    - "10"
+    - "11"
+    - "12"
+    - "13"
+    - "14"
+  downstream: []
+
+inputs:
+  required: []
+  optional:
+    - Stage_Report.md (from any module)
+    - review_report.md
+    - paper/paper.md
+    - analysis_report.json
+
+outputs:
+  - research_memory.md
+  - decision_log.md
+  - lessons_learned.md
+  - Stage_Report.md
+
+quality_metrics:
+  hard_requirements:
+    - research_memory must summarize all available stage reports
+    - decision_log must trace the pipeline decision chain
+  soft_thresholds:
+    - lessons_learned should include actionable improvements
+
+validation:
+  input:
+    - at least one upstream module context should be present
+  output:
+    - research_memory.md must exist and be non-empty
+
+status: ready
+version: "1.0.0"

@@ -1,0 +1,4 @@
+{
+  "status": "error",
+  "message": "Cannot start: current state is completed. Use 'resume' or 'rerun' instead."
+}

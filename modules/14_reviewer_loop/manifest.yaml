@@ -1,0 +1,43 @@
+module_id: "14"
+module_name: "reviewer_loop"
+description: >
+  Automated reviewer loop module. Simulates peer review using LLM,
+  generates review report, reads human-in-the-loop feedback,
+  and produces revision recommendations. Can loop back to Module 12
+  for paper revisions.
+
+dependencies:
+  upstream:
+    - "12"
+    - "13"
+  downstream: []
+
+inputs:
+  required:
+    - paper/paper.md
+  optional:
+    - paper/paper.tex
+    - references/references.bib
+    - human_feedback/review_response.md
+
+outputs:
+  - review_report.md
+  - revision_recommendations.md
+  - review_decision.json
+
+quality_metrics:
+  hard_requirements:
+    - review_report must contain at least 3 reviewer perspectives
+    - review_decision must be one of [accept, minor_revision, major_revision, reject]
+  soft_thresholds:
+    - revision_recommendations should map to specific paper sections
+
+validation:
+  input:
+    - paper/paper.md must exist and be non-empty
+  output:
+    - review_report.md must exist
+    - review_decision.json must contain decision field
+
+status: ready
+version: "1.0.0"

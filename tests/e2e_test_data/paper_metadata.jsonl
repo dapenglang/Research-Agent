@@ -1,0 +1,5 @@
+{"paper_id": "ref01", "doi": "10.1109/CVPR.2023.001", "title": "Attention Is All You Need", "authors": ["Vaswani", "Shazeer"], "year": 2023, "venue": "CVPR"}
+{"paper_id": "ref02", "arxiv_id": "2301.00001", "title": "Adversarial Robustness Survey", "authors": ["Madry", "Zhang"], "year": 2023, "venue": "NeurIPS"}
+{"paper_id": "ref03", "doi": "10.1109/ICCV.2023.002", "title": "Spatial Attention Mechanism", "authors": ["Wang", "Li"], "year": 2023, "venue": "ICCV"}
+{"paper_id": "ref04", "arxiv_id": "2303.00002", "title": "GAN-based Augmentation", "authors": ["Goodfellow", "Chen"], "year": 2023, "venue": "ICLR"}
+{"paper_id": "ref05", "doi": "10.1109/TPAMI.2023.003", "title": "Encoder-Decoder Architectures", "authors": ["Ronneberger", "Fischer"], "year": 2023, "venue": "TPAMI"}

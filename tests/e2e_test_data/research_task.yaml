@@ -1,0 +1,22 @@
+analysis:
+  output_dir: tests/e2e_output/analysis
+  significance_level: 0.05
+experiment:
+  method: samra
+  real:
+    checkpoint_dir: tests/e2e_test_data/checkpoints
+    resume_from_checkpoint: false
+    seed: 42
+  synthetic:
+    num_samples: 100
+    seed: 42
+llm:
+  type: mock
+output:
+  figure_table_dir: tests/e2e_output/figures_tables
+  paper_dir: tests/e2e_output/paper
+  reference_dir: tests/e2e_output/references
+paper:
+  min_references: 5
+task_id: e2e_test_001
+title: 'E2E Test: Full Pipeline Validation'

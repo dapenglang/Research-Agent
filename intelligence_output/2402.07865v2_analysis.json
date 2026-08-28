@@ -1,0 +1,18 @@
+{
+  "paper_id": "2402.07865v2",
+  "title": "2402.07865v2",
+  "authors": [],
+  "abstract": "Synthetic abstract generated for offline mode.",
+  "year": null,
+  "venue": "arxiv",
+  "doi": "",
+  "arxiv_id": "2402.07865v2",
+  "innovation": "Novel approach: 2402.07865v2",
+  "method": "Our method consists of three components.\nThe key equation is $$L = \\sum_{i=1}^{n} x_i^2$$.",
+  "research_problem": "This paper presents a study on 2402.07865v2.\nWe introduce a novel method and evaluate it experimentally.",
+  "dataset": "",
+  "baseline": "",
+  "limitation": "We demonstrated effective results on the task.",
+  "future_direction": "We demonstrated effective results on the task.",
+  "_extraction_strategy": "heuristic"
+}

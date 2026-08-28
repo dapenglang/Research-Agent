@@ -1,0 +1,31 @@
+captions:
+- caption: Figure fig_1
+  data_origin: external
+  id: fig_1
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\fig_1_source.json
+  type: figure
+- caption: Figure fig_2
+  data_origin: external
+  id: fig_2
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\fig_2_source.json
+  type: figure
+- caption: Figure fig_3
+  data_origin: external
+  id: fig_3
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\fig_3_source.json
+  type: figure
+- caption: Table tab_1
+  data_origin: external
+  id: tab_1
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\tab_1_source.json
+  type: table
+- caption: Table tab_2
+  data_origin: external
+  id: tab_2
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\tab_2_source.json
+  type: table
+- caption: Table tab_3
+  data_origin: external
+  id: tab_3
+  source_data_path: output/figures_tables\task_001_vlm_safety\figures\source_data\tab_3_source.json
+  type: table

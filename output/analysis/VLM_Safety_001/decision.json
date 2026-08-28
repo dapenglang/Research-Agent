@@ -1,0 +1,14 @@
+{
+  "decision": "HUMAN_REVIEW_REQUIRED",
+  "reasoning": "All claims failed \u2014 human review required",
+  "claims_passed": [],
+  "claims_failed": [],
+  "claims_inconclusive": [
+    "claim_001",
+    "claim_002",
+    "claim_003",
+    "claim_synth",
+    "claim_expected"
+  ],
+  "target_module": null
+}

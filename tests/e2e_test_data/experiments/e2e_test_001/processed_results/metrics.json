@@ -1,0 +1,6 @@
+{
+  "accuracy": 0.83,
+  "robustness_gain": 0.16,
+  "overhead": 0.15,
+  "f1_score": 0.8
+}

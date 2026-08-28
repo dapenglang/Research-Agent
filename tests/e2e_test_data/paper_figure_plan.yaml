@@ -1,0 +1,13 @@
+figures:
+- caption: Accuracy comparison across methods
+  data_source: synthetic
+  id: fig_accuracy
+  type: bar
+- caption: Robustness under adversarial attack
+  data_source: real
+  id: fig_robustness
+  type: line
+tables:
+- caption: Main experimental results
+  data_source: synthetic
+  id: tbl_main_results

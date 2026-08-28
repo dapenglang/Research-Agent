@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <rect width="600" height="400" fill="white"/>
+  <text x="20" y="30" font-size="16" font-weight="bold">fig_accuracy</text>
+  <text x="20" y="50" font-size="12">Type: bar</text>
+  <text x="20" y="70" font-size="12">Data Origin: synthetic</text>
+  <rect x="30" y="180" width="50" height="170" fill="steelblue"/>
+  <rect x="100" y="314" width="50" height="36" fill="steelblue"/>
+  <rect x="170" y="326" width="50" height="24" fill="steelblue"/>
+  <rect x="240" y="186" width="50" height="164" fill="steelblue"/>
+  <rect x="310" y="182" width="50" height="168" fill="steelblue"/>
+</svg>

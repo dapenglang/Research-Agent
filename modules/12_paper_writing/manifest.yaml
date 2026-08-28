@@ -1,0 +1,56 @@
+module_id: "12"
+module_name: "Paper Writing"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Writes the full research paper in three formats: Markdown, LaTeX, and Word. Integrates all upstream outputs including figures, tables, method specs, results, and analysis into a coherent manuscript."
+dependencies:
+  upstream:
+      - "all"
+  downstream:
+      - "13"
+inputs:
+  required:
+      - "figures/"
+      - "tables/"
+      - "method_spec.json"
+      - "scientific_result_analysis.md"
+  optional:
+      - "paper_style_profile.json"
+      - "research_landscape.md"
+      - "theory_framework.md"
+      - "experiment_plan.md"
+outputs:
+      - "paper/paper.md"
+      - "paper/latex/"
+      - "paper/word/"
+quality_metrics:
+  hard_requirements:
+      - "paper.md exists with title, abstract, and at least 4 sections"
+      - "latex/main.tex exists and is compilable"
+      - "word/paper.docx exists"
+      - "All three formats (Markdown, LaTeX, Word) are produced"
+      - "All figure and table references in text have corresponding files"
+  soft_thresholds:
+      - "Prefer paper_style_profile.json applied consistently"
+      - "Prefer LaTeX Makefile for easy compilation"
+      - "Prefer abstract <= 250 words"
+validation:
+  input_validation:
+      - "figures/ exists with at least 1 figure"
+      - "tables/ exists with at least 1 table"
+      - "scientific_result_analysis.md exists"
+      - "method_spec.json exists"
+  output_validation:
+      - "paper.md has title, abstract, sections"
+      - "latex/main.tex is valid LaTeX"
+      - "word/paper.docx is a valid Word file"
+      - "Figure references in paper match figures/ directory"
+      - "Table references in paper match tables/ directory"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "Must support Markdown + LaTeX + Word (three output formats)."

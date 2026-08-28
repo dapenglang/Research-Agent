@@ -1,0 +1,13 @@
+[
+  {
+    "module": "04",
+    "provider": "LocalLLMProvider",
+    "model": "deepseek-r1:8b",
+    "is_mock": false,
+    "prompt_preview": "Analyze research gaps based on 50 papers in unknown.",
+    "timestamp": "2026-08-17 10:01:53",
+    "fallback": "none",
+    "status": "success",
+    "response_length": 8275
+  }
+]

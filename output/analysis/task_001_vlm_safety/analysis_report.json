@@ -1,0 +1,77 @@
+{
+  "task_id": "task_001_vlm_safety",
+  "data_origin": "unknown",
+  "metrics_summary": {},
+  "claims_summary": {
+    "total": 5,
+    "passed": 0,
+    "failed": 0,
+    "inconclusive": 5
+  },
+  "claim_results": [
+    {
+      "claim_id": "claim_001",
+      "statement": "The proposed method achieves competitive performance on Expected results based on theoretical analysis..",
+      "verdict": "inconclusive",
+      "evidence": "No data available to evaluate claim",
+      "data_origin": "unknown",
+      "pass_criteria": {
+        "metric": [
+          "Expected results based on theoretical analysis."
+        ],
+        "threshold": "competitive with or better than baseline"
+      }
+    },
+    {
+      "claim_id": "claim_002",
+      "statement": "Baseline Expected results based on theoretical analysis. provides reference performance.",
+      "verdict": "inconclusive",
+      "evidence": "No data available to evaluate claim",
+      "data_origin": "unknown",
+      "pass_criteria": {
+        "metric": [
+          "Expected results based on theoretical analysis."
+        ],
+        "threshold": "competitive with or better than baseline"
+      }
+    },
+    {
+      "claim_id": "claim_003",
+      "statement": "Removing core_module degrades performance.",
+      "verdict": "inconclusive",
+      "evidence": "No data available to evaluate claim",
+      "data_origin": "unknown",
+      "pass_criteria": {
+        "metric": [
+          "Expected results based on theoretical analysis."
+        ],
+        "threshold": "competitive with or better than baseline"
+      }
+    },
+    {
+      "claim_id": "claim_synth",
+      "statement": "Validation experiment confirms method correctness.",
+      "verdict": "inconclusive",
+      "evidence": "No data available to evaluate claim",
+      "data_origin": "unknown",
+      "pass_criteria": {
+        "metric": [
+          "Expected results based on theoretical analysis."
+        ],
+        "threshold": "competitive with or better than baseline"
+      }
+    },
+    {
+      "claim_id": "claim_expected",
+      "statement": "Expected results based on theoretical analysis.",
+      "verdict": "inconclusive",
+      "evidence": "No data available to evaluate claim",
+      "data_origin": "unknown",
+      "pass_criteria": {
+        "metric": "overall",
+        "threshold": "as specified in expected results"
+      }
+    }
+  ],
+  "statistical_summary": {}
+}

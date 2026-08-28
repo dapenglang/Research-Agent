@@ -1,0 +1,8 @@
+{
+  "source_data_files": [
+    "tests/e2e_output/figures_tables/e2e_test_001/figures/source_data/fig_accuracy_source.json",
+    "tests/e2e_output/figures_tables/e2e_test_001/figures/source_data/fig_robustness_source.json",
+    "tests/e2e_output/figures_tables/e2e_test_001/figures/source_data/tbl_main_results_source.json"
+  ],
+  "data_origin": "synthetic"
+}

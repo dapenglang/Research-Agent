@@ -1,0 +1,48 @@
+module_id: "10"
+module_name: "Scientific Result Analysis"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Analyzes results from synthetic and real experiments against the claim-evidence plan, producing scientific analysis, claim-evidence mapping, revision recommendations, and a routing decision."
+dependencies:
+  upstream:
+      - "07"
+      - "08"
+      - "09"
+  downstream:
+      - "11"
+inputs:
+  required:
+      - "synthetic_results/"
+      - "claim_evidence_plan.json"
+  optional:
+      - "experiments/<task_id>/"
+outputs:
+      - "scientific_result_analysis.md"
+      - "claim_evidence_mapping.md"
+      - "revision_recommendation.md"
+      - "decision.json"
+quality_metrics:
+  hard_requirements:
+      - "decision.json has a valid decision value"
+      - "Every claim in claim_evidence_plan has a verdict"
+      - "scientific_result_analysis.md is non-empty"
+  soft_thresholds:
+      - "Prefer >= 80% of claims have definitive verdict (pass/fail)"
+      - "Prefer revision_recommendation.md with actionable items"
+validation:
+  input_validation:
+      - "synthetic_results/ exists with metrics.csv and statistics.json"
+      - "claim_evidence_plan.json exists with claims"
+      - "If real experiments exist, they have processed_results"
+  output_validation:
+      - "decision.json decision is one of the 6 allowed values"
+      - "All claims from plan are addressed in claim_evidence_mapping"
+      - "decision is consistent with claim verdicts"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "Decision routing: PASS_TO_FIGURE_TABLE, RETURN_TO_EXPERIMENT, RETURN_TO_EXPERIMENT_PLAN, RETURN_TO_METHOD, RETURN_TO_INNOVATION, HUMAN_REVIEW_REQUIRED"

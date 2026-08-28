@@ -1,0 +1,49 @@
+task_id: "task_002_edge_security"
+title: "Edge Computing Security Research"
+
+research:
+  domain: "security"
+  topic: "Adversarial Robustness in Edge Computing Systems"
+  keywords:
+    - "edge computing"
+    - "adversarial robustness"
+    - "model compression"
+    - "security"
+  research_question: "How do adversarial attacks affect compressed models deployed on edge devices?"
+  target: "MobileNet-V3"
+
+literature:
+  candidate_target: []
+  core_target: []
+  deep_analysis_target: []
+  arxiv:
+    download_pdf: true
+    download_source: true
+    prefer_latex_analysis: true
+
+llm:
+  type: "deepseek"
+  model: "deepseek-chat"
+
+experiment:
+  mode: "synthetic_research"
+  method: "samra"
+  synthetic:
+    num_samples: 100
+    seed: 42
+  real:
+    checkpoint_dir: "checkpoints"
+    resume_from_checkpoint: false
+    seed: 42
+
+analysis:
+  output_dir: "output/analysis"
+  significance_level: 0.05
+
+output:
+  figure_table_dir: "output/figures_tables"
+  paper_dir: "output/paper"
+  reference_dir: "output/references"
+
+paper:
+  min_references: 30

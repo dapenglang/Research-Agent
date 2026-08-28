@@ -1,0 +1,12 @@
+{
+  "decision": "PASS_TO_FIGURE_TABLE",
+  "reasoning": "3/3 claims passed (rate=100.0%)",
+  "claims_passed": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "claims_failed": [],
+  "claims_inconclusive": [],
+  "target_module": "11"
+}

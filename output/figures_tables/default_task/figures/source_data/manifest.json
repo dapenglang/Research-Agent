@@ -1,0 +1,11 @@
+{
+  "source_data_files": [
+    "output/figures_tables\\default_task\\figures\\source_data\\fig_1_source.json",
+    "output/figures_tables\\default_task\\figures\\source_data\\fig_2_source.json",
+    "output/figures_tables\\default_task\\figures\\source_data\\fig_3_source.json",
+    "output/figures_tables\\default_task\\figures\\source_data\\tab_1_source.json",
+    "output/figures_tables\\default_task\\figures\\source_data\\tab_2_source.json",
+    "output/figures_tables\\default_task\\figures\\source_data\\tab_3_source.json"
+  ],
+  "data_origin": "external"
+}

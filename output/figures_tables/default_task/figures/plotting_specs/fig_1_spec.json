@@ -1,0 +1,7 @@
+{
+  "figure_id": "fig_1",
+  "type": "bar_chart",
+  "data_source": "main_experiment_results",
+  "source_data_path": "output/figures_tables\\default_task\\figures\\source_data\\fig_1_source.json",
+  "data_origin": "external"
+}

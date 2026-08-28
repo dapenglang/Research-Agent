@@ -1,0 +1,7 @@
+{
+  "figure_id": "fig_2",
+  "type": "bar_chart",
+  "data_source": "ablation_experiment_results",
+  "source_data_path": "output/figures_tables\\default_task\\figures\\source_data\\fig_2_source.json",
+  "data_origin": "external"
+}

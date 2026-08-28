@@ -1,0 +1,7 @@
+{
+  "figure_id": "fig_3",
+  "type": "line_chart",
+  "data_source": "scaling_experiment_results",
+  "source_data_path": "output/figures_tables\\VLM_Safety_001\\figures\\source_data\\fig_3_source.json",
+  "data_origin": "external"
+}

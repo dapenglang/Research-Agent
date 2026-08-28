@@ -1,0 +1,100 @@
+{
+  "task_id": "e2e_test_001",
+  "data_origin": "mixed",
+  "metrics_summary": {
+    "synthetic": {
+      "accuracy": 0.85,
+      "robustness_gain": 0.18,
+      "overhead": 0.12,
+      "f1_score": 0.82,
+      "precision": 0.84,
+      "recall": 0.8
+    },
+    "real": {
+      "accuracy": 0.83,
+      "robustness_gain": 0.16,
+      "overhead": 0.15,
+      "f1_score": 0.8
+    }
+  },
+  "claims_summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "inconclusive": 0
+  },
+  "claim_results": [
+    {
+      "claim_id": "C1",
+      "statement": "SAMRA achieves >80% accuracy on benchmark",
+      "verdict": "pass",
+      "evidence": "accuracy=0.8300 (threshold: 0.8\u2264x\u2264None) \u2192 PASS [data_origin=mixed]",
+      "data_origin": "mixed",
+      "pass_criteria": {
+        "accuracy": {
+          "min": 0.8
+        }
+      }
+    },
+    {
+      "claim_id": "C2",
+      "statement": "Adversarial robustness improves by >15%",
+      "verdict": "pass",
+      "evidence": "robustness_gain=0.1600 (threshold: 0.15\u2264x\u2264None) \u2192 PASS [data_origin=mixed]",
+      "data_origin": "mixed",
+      "pass_criteria": {
+        "robustness_gain": {
+          "min": 0.15
+        }
+      }
+    },
+    {
+      "claim_id": "C3",
+      "statement": "Computational overhead is <20%",
+      "verdict": "pass",
+      "evidence": "overhead=0.1500 (threshold: None\u2264x\u22640.2) \u2192 PASS [data_origin=mixed]",
+      "data_origin": "mixed",
+      "pass_criteria": {
+        "overhead": {
+          "max": 0.2
+        }
+      }
+    }
+  ],
+  "statistical_summary": {
+    "synthetic": {
+      "accuracy": {
+        "value": 0.85
+      },
+      "robustness_gain": {
+        "value": 0.18
+      },
+      "overhead": {
+        "value": 0.12
+      },
+      "f1_score": {
+        "value": 0.82
+      },
+      "precision": {
+        "value": 0.84
+      },
+      "recall": {
+        "value": 0.8
+      }
+    },
+    "real": {
+      "accuracy": {
+        "value": 0.83
+      },
+      "robustness_gain": {
+        "value": 0.16
+      },
+      "overhead": {
+        "value": 0.15
+      },
+      "f1_score": {
+        "value": 0.8
+      }
+    }
+  }
+}

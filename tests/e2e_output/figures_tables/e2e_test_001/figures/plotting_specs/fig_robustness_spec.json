@@ -1,0 +1,7 @@
+{
+  "figure_id": "fig_robustness",
+  "type": "line",
+  "data_source": "real",
+  "source_data_path": "tests/e2e_output/figures_tables/e2e_test_001/figures/source_data/fig_robustness_source.json",
+  "data_origin": "synthetic"
+}

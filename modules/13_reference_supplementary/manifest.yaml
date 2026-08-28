@@ -1,0 +1,50 @@
+module_id: "13"
+module_name: "Reference & Supplementary"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Generates the bibliography file, validates citations against paper metadata, and produces supplementary materials in LaTeX and Word formats. This is the final module in the pipeline."
+dependencies:
+  upstream:
+      - "01"
+      - "12"
+  downstream:
+      []
+inputs:
+  required:
+      - "paper/"
+      - "paper_metadata.jsonl"
+  optional:
+      []
+outputs:
+      - "references.bib"
+      - "citation_validation_report.md"
+      - "supplementary.tex"
+      - "supplementary.docx"
+quality_metrics:
+  hard_requirements:
+      - "references.bib has at least 1 entry"
+      - "citation_validation_report.md exists with citation counts"
+      - "supplementary.tex is valid LaTeX"
+      - "supplementary.docx is a valid Word file"
+      - "All citations in paper/ have corresponding bib entries"
+  soft_thresholds:
+      - "Prefer 0 invalid citations"
+      - "Prefer supplementary materials include appendix with full results"
+validation:
+  input_validation:
+      - "paper/ directory exists with paper.md"
+      - "paper_metadata.jsonl exists and is valid JSONL"
+      - "At least 1 paper metadata entry exists"
+  output_validation:
+      - "references.bib entries match paper_metadata.jsonl"
+      - "All in-text citations resolved in references.bib"
+      - "citation_validation_report has matching totals"
+      - "supplementary.tex is compilable LaTeX"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "Final module in the pipeline. No downstream modules."

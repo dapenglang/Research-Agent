@@ -1,0 +1,58 @@
+{
+  "total_papers": 50,
+  "total_downloadable": 50,
+  "search_queries": [
+    "vision-language model safety",
+    "visual large language model security",
+    "multimodal jailbreak attack",
+    "adversarial attack on vision-language models",
+    "VLM alignment",
+    "multimodal safety benchmark",
+    "robust vision-language learning",
+    "adversarial robustness",
+    "safety alignment of large multimodal models",
+    "trustworthy multimodal AI"
+  ],
+  "databases_queried": [
+    "arxiv",
+    "semantic_scholar",
+    "openreview",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv",
+    "arxiv"
+  ],
+  "retrieval_timestamp": "2026-08-17T02:00:49Z",
+  "task_id": "VLM_Safety_001",
+  "research_context": {
+    "domain": "computer_vision",
+    "topic": "",
+    "keywords": [
+      "vision-language model safety",
+      "visual large language model security",
+      "multimodal jailbreak attack",
+      "adversarial attack on vision-language models",
+      "VLM alignment",
+      "multimodal safety benchmark",
+      "robust vision-language learning",
+      "adversarial robustness",
+      "safety alignment of large multimodal models",
+      "trustworthy multimodal AI"
+    ],
+    "research_question": "",
+    "target": "",
+    "candidate_target": [],
+    "core_target": [],
+    "deep_analysis_target": [],
+    "arxiv_download_pdf": true,
+    "arxiv_prefer_latex": true,
+    "synthetic_enabled": false,
+    "real_enabled": false,
+    "experiment_method": ""
+  }
+}
