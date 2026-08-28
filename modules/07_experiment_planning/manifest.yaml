@@ -1,0 +1,47 @@
+module_id: "07"
+module_name: "Experiment Planning"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Translates the method specification into a concrete experiment plan with experiment matrix, claim-evidence mapping, and paper figure plan."
+dependencies:
+  upstream:
+      - "06"
+  downstream:
+      - "08"
+      - "09"
+      - "10"
+      - "11"
+inputs:
+  required:
+      - "method_spec.json"
+  optional:
+      []
+outputs:
+      - "experiment_plan.md"
+      - "experiment_matrix.yaml"
+      - "claim_evidence_plan.json"
+      - "paper_figure_plan.yaml"
+quality_metrics:
+  hard_requirements:
+      - "experiment_matrix.yaml has at least 1 experiment"
+      - "claim_evidence_plan.json has at least 1 claim with pass_criteria"
+      - "paper_figure_plan.yaml has at least 1 figure"
+      - "Every experiment maps to at least 1 claim"
+  soft_thresholds:
+      - "Prefer >= 3 experiments for robust evaluation"
+      - "Prefer >= 2 figure types (e.g., line chart, bar chart, table)"
+validation:
+  input_validation:
+      - "method_spec.json exists and is valid JSON"
+      - "method_spec has components and schemas"
+  output_validation:
+      - "Every experiment in matrix has unique id"
+      - "Every claim has at least 1 experiment mapping"
+      - "paper_figure_plan experiments reference valid experiment ids"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+

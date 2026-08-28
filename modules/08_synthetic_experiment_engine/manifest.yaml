@@ -1,0 +1,56 @@
+module_id: "08"
+module_name: "Synthetic Experiment Engine"
+module_version: "1.0"
+schema_version: "1.0"
+description: "Executes synthetic experiments based on the method specification and experiment matrix. Produces raw and processed results, metrics, statistics, and figures. All output files are tagged with data_origin='synthetic'. Backend adapters (e.g., SAMRA Monte Carlo) are pluggable, NOT built into this module."
+dependencies:
+  upstream:
+      - "06"
+      - "07"
+  downstream:
+      - "10"
+      - "11"
+inputs:
+  required:
+      - "method_spec.json"
+      - "experiment_matrix.yaml"
+      - "claim_evidence_plan.json"
+  optional:
+      []
+outputs:
+      - "synthetic_results/raw/"
+      - "synthetic_results/processed/"
+      - "synthetic_results/metrics.csv"
+      - "synthetic_results/statistics.json"
+      - "synthetic_results/figures/"
+      - "synthetic_results/tables/"
+      - "synthetic_results/analysis/"
+      - "synthetic_results/provenance.json"
+quality_metrics:
+  hard_requirements:
+      - "All output files MUST have data_origin='synthetic'"
+      - "metrics.csv exists with at least 1 row per experiment"
+      - "provenance.json records adapter_used and adapter_version"
+      - "Backend adapters (e.g., SAMRA) are plugins, NOT hardcoded"
+  soft_thresholds:
+      - "Prefer confidence intervals in statistics.json"
+      - "Prefer raw results preserved for reproducibility"
+validation:
+  input_validation:
+      - "method_spec.json exists and is valid"
+      - "experiment_matrix.yaml exists with synthetic experiments"
+      - "claim_evidence_plan.json exists"
+      - "Only experiments with data_origin='synthetic' are processed"
+  output_validation:
+      - "metrics.csv has data_origin column with all values='synthetic'"
+      - "statistics.json has data_origin='synthetic'"
+      - "provenance.json has data_origin='synthetic'"
+      - "All experiments from matrix are represented in results"
+status:
+  default: "NOT_STARTED"
+  allowed_transitions:
+    - "IN_PROGRESS"
+    - "COMPLETED"
+    - "FAILED"
+
+notes: "NOTE: SAMRA Monte Carlo is a backend adapter, NOT built into this module."
